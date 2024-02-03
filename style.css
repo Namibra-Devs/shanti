@@ -1,0 +1,37 @@
+:root {
+    --ff-Header: 'Cormorant', serif;
+    --ff-Body: 'Jost', sans-serif;
+
+    /* Color */
+    --clr-primary: #544946;
+    --clr-dark: #212121;
+    --clr-lgt-dark: #454545;
+    --clr-gray: #65635F;
+    --clr-lgt-gray: #F4F4F2;
+}
+
+body {
+    font-family: var(--ff-Body) !important;
+}
+
+.logo {
+    margin-top: -.5rem !important;
+}
+
+.logo img {
+    height: 4.5rem !important;
+}
+
+.logobanner {
+    height: 100vh !important;
+}
+
+.login-header {
+    font-family: var(--ff-Header) !important;
+    font-weight: 500 !important;
+    font-size: 3rem !important;
+}
+
+.login-form {
+    width: 60%;
+}

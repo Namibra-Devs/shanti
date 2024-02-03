@@ -7,11 +7,18 @@
     --clr-dark: #212121;
     --clr-lgt-dark: #454545;
     --clr-gray: #65635F;
+    /* --clr-grey: #979797; */
     --clr-lgt-gray: #F4F4F2;
 }
 
 body {
     font-family: var(--ff-Body) !important;
+}
+
+.header {
+    font-family: var(--ff-Header) !important;
+    font-weight: 500 !important;
+    font-size: 2.5rem !important;
 }
 
 .logo {
@@ -35,3 +42,90 @@ body {
 .login-form {
     width: 60%;
 }
+
+.hero-img{
+    background-image: url(./src/images/hero-img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .5;
+}
+
+.hero-text {
+    margin-top: 10rem !important;
+}
+
+.hero-text h1 {
+    font-family: var(--ff-Header) !important;
+    font-weight: 500 !important;
+    font-size: 3.5rem !important;
+    line-height: 4.5rem !important;
+}
+
+/* Owl Carousel */
+.stretch-card>.card {
+    width: 100%;
+    min-width: 100%
+}
+
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
+
+@media (max-width:991.98px) {
+    .padding {
+        padding: 1.5rem
+    }
+}
+
+@media (max-width:767.98px) {
+    .padding {
+        padding: 1rem
+    }
+}
+
+.padding {
+    padding: 3rem
+}
+
+
+.owl-carousel .item{
+ margin: 3px;
+}
+.owl-carousel .item img{
+ display: block;
+ width: 100%;
+ height: auto;
+}
+
+.owl-carousel .item {
+   margin: 3px;
+}
+
+.owl-carousel{
+   margin-bottom:15px;
+}
+
+.featured-collections {
+    background: var(--clr-lgt-gray);
+}
+
+.featured-collections p {
+    font-size: .9rem;
+    padding: .5rem;
+}
+
+.collection-img {
+    /* height: 7rem; */
+}
+
+/* .collections {
+    height: 5.5rem;
+} */

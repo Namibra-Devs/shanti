@@ -1,5 +1,16 @@
 
 $(document).ready(function() {
+
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 100) {
+	    $(".navbar").css("background" , "#f4f4f2");
+	  }
+
+	  else{
+		  $(".navbar").css("background" , "transparent");  	
+	  }
+  })
  
     $(".owl-carousel").owlCarousel({
    
@@ -19,3 +30,8 @@ $(document).ready(function() {
     });
    
   });
+
+  
+$(document).ready(function(){
+
+})

@@ -11,6 +11,10 @@
   --clr-lgt-gray: #f4f4f2;
 }
 
+.header-ff {
+  font-family: var(--ff-Header);
+}
+
 body {
   font-family: var(--ff-Body) !important;
 }
@@ -121,6 +125,11 @@ body {
 
 .showover {
   overflow-x: hidden;
+}
+
+.follow:hover {
+  background-color: var(--clr-dark);
+  color: var(--clr-lgt-gray) !important;
 }
 
 @media (max-width: 991.98px) {

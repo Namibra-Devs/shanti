@@ -211,29 +211,106 @@
       </div>
     </nav>
 
-    <!-- Hero Header-->
-    <div class="container-fluid mb-5 pb-5">
-        <div class="hero-img">
-        </div>
-        <div class="row m-auto hero-text justify-content-center align-items-center">
-            <h1 class="text-center col-lg-8">Custom jewelry for yourself, friends, family, and special occasions.</h1>
+    <main  role="main" class="container mt-4">
+    <!-- Menu and Filter -->
 
-            <div class="text-center my-5">
-                <a href="collections.html" class="btn btn-dark px-5 rounded-1">EXPLORE COLLECTION</a>
-                </div>
-            </div>
-      </div>
 
-    <!-- Featured Products -->
-    <div class="container my-5 pt-5">
+  <!-- Featured Products -->
+    <div class="container my-5 pt-lg-5">
         <div class="mt-5 pt-5">
-            <h2 class="text-center header">Featured Products</h2>
-            <p class="text-center text-muted">Essential products, best values, lower prices</p>
+            <p class="text-center text-muted header-ff d-none d-lg-block"><a href="" class="text-decoration-none text-muted">Home</a> / <a href="" class="active text-decoration-none text-dark">Collections</a></p>
+            <h2 class="text-center header">Collections</h2>
+
+            <div class="container my-5">
+   
+              <nav class="py-2 navbar-expand-lg bg-white border border-2 border-black border-lg-0 rounded-1">
+                <div class="container-fluid">
+                  <button class="navbar-toggler border-0 w-100 rounded-1 text-uppercase text-center align-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">Filter <span class="w-100 ms-2"><img src="./src/images/filter.svg" alt=""></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 mt-4 mt-lg-0 text-center">
+                    
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ALL MATERIALS <img src="./src/images/arrow-down.svg" alt="">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ANY GENDER <img src="./src/images/arrow-down.svg" alt="">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        IN STOCK <img src="./src/images/arrow-down.svg" alt="">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ANY TYPE <img src="./src/images/arrow-down.svg" alt="">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PRICE <img src="./src/images/arrow-down.svg" alt="">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item">
+                        <button class="btn mx-2 px-3 border border-1 border-black-50">Clear</button>
+                      </li>
+                    </ul>
+                    <form class="d-flex justify-content-center align-content-between">
+                      <div class="border d-flex rounded-1">
+                        <input class="form-control border-0" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn" type="submit">
+                          <img src="./src/images/search.svg" alt="">
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+           </div>
         </div>
       
         <!-- For Small Screens -->
-       <div class="row d-lg-none justify-content-center align-content-center">
-        <div class="col-6">
+       <div class="row justify-content-center align-content-center">
+        <div class="col-lg-3 col-md-4 col-6">
               <div class="card border-0">
                 <div class="card-body">
                   <div class="item">
@@ -253,7 +330,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-3 col-md-4 col-6">
               <div class="card border-0">
                 <div class="card-body">
                   <div class="item">
@@ -273,7 +350,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-3 col-md-4 col-6">
               <div class="card border-0">
                 <div class="card-body">
                   <div class="item">
@@ -293,7 +370,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-3 col-md-4 col-6">
               <div class="card border-0">
                 <div class="card-body">
                   <div class="item">
@@ -313,7 +390,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-3 col-md-4 col-6">
               <div class="card border-0">
                 <div class="card-body">
                   <div class="item">
@@ -333,7 +410,47 @@
                 </div>
               </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-3 col-md-4 col-6">
+              <div class="card border-0">
+                <div class="card-body">
+                  <div class="item">
+                    <img src="./src/images/Painting.png" alt="image" class="w-100"/>
+                    <div class="mt-2 d-flex justify-content-between align-content-center my-2">
+                      <div>
+                        <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
+                          <p class="fw-bold"><span>₵</span>2,499</p>
+                        </a>
+                      </div>
+
+                      <div>
+                       <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+              <div class="card border-0">
+                <div class="card-body">
+                  <div class="item">
+                    <img src="./src/images/Painting.png" alt="image" class="w-100"/>
+                    <div class="mt-2 d-flex justify-content-between align-content-center my-2">
+                      <div>
+                        <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
+                          <p class="fw-bold"><span>₵</span>2,499</p>
+                        </a>
+                      </div>
+
+                      <div>
+                       <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
               <div class="card border-0">
                 <div class="card-body">
                   <div class="item">
@@ -355,319 +472,12 @@
         </div>
        </div>
 
-        <!-- For Large Screens -->
-<div class="page-content page-container d-none d-lg-block" id="page-content">
-    <div class="padding">
-        <div class="row">
-<div class="col-lg-12 grid-margin stretch-card">
-              <div class="card border-0 rounded-0 shadow-none bg-transparent">
-                <div class="card-body">
-                  <div class="owl-carousel">
-                    <div class="item">
-                      <img src="./src/images/Painting.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
+       <div class="text-center w-100">
+        <a href="" class="btn border border-2 border-dark-50 px-5 follow">See More</a>
+       </div>
+    </div>
 
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting2.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting3.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting2.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting3.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting2.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./src/images/Painting3.png" alt="image"/>
-                      <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                        <div>
-                          <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                            <p class="fw-bold"><span>₵</span>2,499</p>
-                          </a>
-                        </div>
-
-                        <div>
-                         <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                        </div>
-                        </div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-              </div>
-            </div>
-        </div>
-        
-        <!-- Featured Collections -->
-        <div class="featured-collections">
-
-          <div class="container my-5 py-5 px-5 px-lg-0">
-            <div class="">
-              <h4 class="">Featured Collections</h4>
-            </div>
-
-            <div class="d-flex flex-column flex-lg-row justify-content-around mt-4 gap-4">
-              <div class="border border-2 border-black-50 rounded-2 m-0 px-0 collections">
-                <div class="d-flex gap-4">
-                  <img src="./src/images/rectangle.png" alt="" class="img-fluid collection-img">
-                  <div class="py-3">
-                    <h6>BEST SELLERS</h6>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-                </div>
-
-              <div class="border border-2 border-black-50 rounded-2 m-0 px-0 ollections">
-                <div class="d-flex gap-4">
-                  <img src="./src/images/Rectangle2.png" alt="" class="img-fluid collection-img">
-                  <div class="py-3">
-                    <h6>NEW ARRIVALS</h6>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-                </div>
-
-              <div class="border border-2 border-black-50 rounded-2 m-0 px-0 ollections">
-                <div class="d-flex gap-4">
-                  <img src="./src/images/Rectangle.png" alt="" class="img-fluid collection-img">
-                  <div class="py-3">
-                    <h6>BEST OFFERS</h6>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-                </div>
-            </div>
-          </div>
-          
-        </div>
-
-        <!-- Categories -->
-        <div class="container my-5 pt-3 pb-5">
-          <div class="text-center my-5">
-            <h1 class="header">Categories</h1>
-          </div>
-
-          <div class="row gap-2 justify-content-center">
-            <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
-              <div class="text-center py-4">
-                <img src="./src/images/products/rings.svg" alt="" class="image-fluid">
-              </div>
-
-              <div class="text-center">
-                <h5>RINGS</h5>
-                <p class="text-muted"><span>56</span>  items</p>
-              </div>
-            </div>
-            <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
-              <div class="text-center py-4">
-                <img src="./src/images/products/Earring.svg" alt="" class="image-fluid">
-              </div>
-
-              <div class="text-center">
-                <h5>EARRINGS</h5>
-                <p class="text-muted"><span>56</span>  items</p>
-              </div>
-            </div>
-            <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
-              <div class="text-center py-4">
-                <img src="./src/images/products/Bracelet.svg" alt="" class="image-fluid">
-              </div>
-
-              <div class="text-center">
-                <h5>BRACELETS</h5>
-                <p class="text-muted"><span>56</span>  items</p>
-              </div>
-            </div>
-            <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
-              <div class="text-center py-4">
-                <img src="./src/images/products/pendants.svg" alt="" class="image-fluid">
-              </div>
-
-              <div class="text-center">
-                <h5>PENDANTS</h5>
-                <p class="text-muted"><span>56</span>  items</p>
-              </div>
-            </div>
-            <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
-              <div class="text-center py-4">
-                <img src="./src/images/products/watch.svg" alt="" class="image-fluid">
-              </div>
-
-              <div class="text-center">
-                <h5>WATCHES</h5>
-                <p class="text-muted"><span>56</span>  items</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shanti Jewelry Show -->
-        <div class="shanti-j w-100">
-          <div class="my-5 py-5 px-0 mx-0 g-0 w-100">
-            <div class="row m-0 p-0 showover">
-              <div class="col-md-3 col-12 p-0 shantis d-none d-md-block">
-                <div class="row">
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti1.png" alt="" class="shantisocial shantihide">
-                  </div>
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti3.png" alt="" class="shantisocial">
-                  </div>
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti2.png" alt="" class="shantisocial shantihide">
-                  </div>
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti.png" alt="" class="shantisocial">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-12 p-0 d-flex flex-column justify-content-center align-content-center">
-                <h3 class="joinshanti text-center display-5 d-none d-lg-block">Join shanti.jewelry</h3>
-                <h3 class="joinshanti text-center display-5 d-block d-lg-none">Join #do.jewelry</h3>
-                <div class="my-5 text-center text-capitalize">
-                  <a href="#" class="text-decoration-none text-dark w-100 border border-2 border-dark-50 rounded-1 px-4 py-2 text-uppercase follow">Follow us on instagram</a>
-                </div> 
-              </div>
-
-              <div class="col-md-3 col-12 p-0 shantis1 d-none d-md-block">
-                <div class="row">
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti1.png" alt="" class="shantisocial">
-                  </div>
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti3.png" alt="" class="shantisocial shantihide">
-                  </div>
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti2.png" alt="" class="shantisocial">
-                  </div>
-                  <div class="col-6">
-                    <img src="./src/images/joinshanti.png" alt="" class="shantisocial shantihide">
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-12 gap-0 d-lg-none d-block">
-                <div class="row w-100 m-0 p-0">
-                  <div class="col-6 p-0">
-                    <img src="./src/images/joinshanti1.png" alt="" class="w-100">
-                  </div>
-                  <div class="col-6 p-0">
-                    <img src="./src/images/joinshanti3.png" alt="" class="w-100">
-                  </div>
-                  <div class="col-6 p-0">
-                    <img src="./src/images/joinshanti2.png" alt="" class="w-100">
-                  </div>
-                  <div class="col-6 p-0">
-                    <img src="./src/images/joinshanti.png" alt="" class="w-100">
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
+      </main>
 
         <!-- Footer -->
 

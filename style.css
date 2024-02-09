@@ -15,6 +15,10 @@
   font-family: var(--ff-Header);
 }
 
+.body-ff {
+  font-family: var(--ff-Body);
+}
+
 body {
   font-family: var(--ff-Body) !important;
 }
@@ -146,6 +150,10 @@ body {
   }
   .padding {
     padding: 1rem;
+  }
+
+  .buy, .addcart {
+    font-size: .8rem !important;
   }
 }
 

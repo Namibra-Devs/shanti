@@ -15,6 +15,10 @@
   font-family: var(--ff-Header);
 }
 
+.bg-grayclr {
+  background: var(--clr-gray);
+}
+
 .body-ff {
   font-family: var(--ff-Body);
 }
@@ -140,8 +144,15 @@ body {
   .padding {
     padding: 1.5rem;
   }
+
+  .shippay {
+    width: 100% !important;
+  }
 }
 
+.cart-img {
+  width: 12rem;
+}
 @media (max-width: 767.98px) {
   .hero-text h1{
     font-size: 2.5rem !important;
@@ -154,6 +165,14 @@ body {
 
   .buy, .addcart {
     font-size: .8rem !important;
+  }
+
+  .cart-img {
+    width: 100% !important;
+  }
+
+  .shippay {
+    width: 100% !important;
   }
 }
 

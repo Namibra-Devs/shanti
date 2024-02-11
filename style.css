@@ -140,6 +140,18 @@ body {
   color: var(--clr-lgt-gray) !important;
 }
 
+.order-placed {
+  background-color: #FFDECC !important;
+}
+
+.order-shipped {
+  background-color: #CCF0FF;
+}
+
+.order-delivered {
+  background-color: #BEF8CB;
+}
+
 @media (max-width: 991.98px) {
   .padding {
     padding: 1.5rem;

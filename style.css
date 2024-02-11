@@ -96,7 +96,7 @@ body {
 }
 
 .hero-img {
-  background-image: url(./src/images/hero-img.svg);
+  background-image: url('./src/images/hero-img.svg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -186,6 +186,19 @@ body {
   .shippay {
     width: 100% !important;
   }
+
+  
+.hero-img {
+  background-image: url('./src/images/heroimg2.png');
+  height: 65vh;  
+}
+
+@media (max-width: 560px) {
+  .hero-img {
+    height: 100vh;
+  }
+}
+
 }
 
 .padding {

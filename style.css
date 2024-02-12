@@ -160,10 +160,14 @@ body {
   .shippay {
     width: 100% !important;
   }
-}
+
+  .shantisocial, .shantisocial2, .shantisocial1 {
+    width: 12rem !important;
+  }
 
 .cart-img {
   width: 12rem;
+}
 }
 @media (max-width: 767.98px) {
   .hero-text h1{
@@ -190,7 +194,8 @@ body {
   
 .hero-img {
   background-image: url('./src/images/heroimg2.png');
-  height: 60vh;  
+  height: 60vh !important;  
+}
 }
 
 @media (max-width: 560px) {
@@ -199,7 +204,6 @@ body {
   }
 }
 
-}
 
 .padding {
   padding: 3rem;
@@ -242,10 +246,6 @@ body {
   margin: 0 !important;
 }
 
-.shantihide{
-    margin-left: -10rem;
-    padding: 5rem;
-}
 
 .bg-badge {
   background: var(--clr-primary) !important;

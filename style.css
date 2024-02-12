@@ -190,7 +190,7 @@ body {
   
 .hero-img {
   background-image: url('./src/images/heroimg2.png');
-  height: 65vh;  
+  height: 60vh;  
 }
 
 @media (max-width: 560px) {

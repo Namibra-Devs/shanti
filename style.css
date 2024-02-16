@@ -169,6 +169,15 @@ body {
   width: 12rem;
 }
 }
+
+
+@media (min-width: 810px) {
+  .hero-img {
+    background-image: url('./src/images/heroimg2.png');
+    height: 55vh !important;
+  }
+  
+}
 @media (max-width: 767.98px) {
   .hero-text h1{
     font-size: 2.5rem !important;
@@ -201,6 +210,12 @@ body {
 @media (max-width: 560px) {
   .hero-img {
     height: 100vh;
+  }
+}
+
+@media (min-width: 560px) {
+  .hero-img {
+    height: 80vh;
   }
 }
 

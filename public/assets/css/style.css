@@ -1,0 +1,517 @@
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+header {
+    z-index: 1;
+    position: absolute;
+}
+.nav-container {
+    padding: 15px 250px;
+}
+
+.nav-item {
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-item a {
+    color: #dfdfdf;
+}
+
+/* section {
+    padding: 30px 278px;
+} */
+
+.get-ticket-btn {
+    background-color: #ddfe01;
+    padding: 10px 24px;
+    text-transform: uppercase;
+    border-right: 5px solid #f12e94;
+    border-bottom: 5px solid #f12e94;
+    border-bottom-right-radius: 4px;
+    color: black;
+}
+
+.get-ticket-btn:hover {
+    background-color: #dcfe018a;
+    color: black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.hero-section {
+    padding-top: 15rem;
+    background: url("../frontend/images/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* padding-left: 15%; */
+    height: 70vh;
+    position: relative;
+}
+
+.hero_left-content h1 {
+    color: #f6f6f6;
+    font-size: 50px;
+    font-family: Oswald;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 5rem;
+}
+
+.time {
+    color: #efefef;
+
+    font-family: Space Grotesk;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 24px; /* 75% */
+    text-transform: uppercase;
+}
+
+.date {
+    color: #ddfe01;
+    font-family: Space Grotesk;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px; /* 75% */
+    text-transform: uppercase;
+}
+
+.hero_right-content {
+    padding-top: 5rem;
+    padding-left: 5rem;
+}
+
+.hero_right-content p {
+    color: #fff;
+    padding-top: 5rem;
+    position: absolute;
+    left: -1%;
+}
+
+.ticket-strock-section {
+    background: url('../frontend/images/tickets-strocks-bg.png');
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-strocks {
+    position: relative;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.purple-text {
+    background: #b771f4;
+    text-align: center;
+    transform: rotate(-7deg);
+    width: 100%;
+    position: absolute;
+    box-sizing: content-box;
+
+}
+
+.yellow-text {
+    background: #ddfe01;
+    transform: rotate(7deg);
+    width: 100%;
+    box-sizing: content-box;
+}
+
+
+/* Featuring starts */
+
+.featuring-section {
+    background: url('../frontend/images/blackbike-icon.png');
+}
+
+.featuring-card {
+
+}
+
+.featuring_card-content {
+    padding: 20px;
+    background-color: #DBFE01;
+}
+
+.content1 {
+    background-color: #DBFE01;
+}
+
+.content2 {
+    background-color: #01C8AF;
+}
+
+.content3 {
+    background-color: #B771F4;
+}
+
+
+.section-title .left {
+    padding-left: 25rem;
+}
+
+.section-title .right {
+    padding-left: 14rem;
+}
+
+.tickets-section-title {
+    height: 25vh;
+    padding: 0 !important;
+    background: linear-gradient(0deg, rgba(33, 31, 31, 0.73) 0%, rgba(33, 31, 31, 0.73) 100%), url('../frontend/images/coup-bg.jpeg'), lightgray 0px -457.872px / 100% 380.851% no-repeat;
+    background-position: center;
+}
+
+.tickets-section-title h1 {
+    padding: 5rem 20px;
+}
+
+
+/* tickets section start */
+
+.tickets-section {
+    background: rgba(0, 0, 0, 0.917);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: white;
+}
+
+.tickets-section-title .coupe {
+    color: #C686FF;
+}
+
+.tickets-section-title .your {
+    color: #F6F6F6;
+}
+
+.tickets-section-title .tickets {
+    color: #FEED01;
+}
+
+.ticket-header {
+    text-align: center;
+}
+
+/* gold ticket */
+
+.gold-ticket {
+    background-color: #2D2E2B;
+    padding: 30px 20px 60px 20px;
+}
+
+.gold-ticket h3 {
+    color: #DBFE01;
+    text-align: center;
+}
+
+.description {
+    padding-bottom: 50px;
+    padding-top: 30px;
+    line-height: 30px;
+    color: #FFF;
+}
+/* platinum ticket */
+
+.platinum-ticket {
+    background-color: #262424;
+    padding: 30px 20px 60px 20px;
+}
+
+.platinum-ticket h3 {
+    color: #DBFE01;
+    text-align: center;
+}
+
+/* diamond ticket */
+
+.diamond-ticket {
+    background-color: #262B1D;
+    padding: 30px 20px 60px 20px;
+}
+
+.diamond-ticket h3 {
+    color: #DBFE01;
+    text-align: center;
+}
+
+
+/* celebrity section */
+
+.celebrity-section {
+    background: url('../frontend/images/celeb-bg.png');
+    padding: 5rem 0 5rem 18rem;
+}
+
+.celebrity-text {
+    color: #FFF;
+}
+
+.celebrity-text p {
+    padding: 20px 0;
+}
+
+.celebrity-text a {
+    position: absolute;
+    transform: rotate(-7deg);
+}
+
+.celebrity-images img {
+    max-width: 245px;
+}
+
+
+/* Get involved section */
+.get-involved-section {
+    background: url('../frontend/images/blackbike-icon.png');
+}
+
+.get-involved-card img {
+    width: 100%;
+}
+
+.get-involved-section .section-title {
+    color: #FFF;
+    padding-bottom: 30px;
+}
+
+.get-involved_card-content {
+    padding: 50px;
+}
+
+
+.products-section {
+    background: #212121;
+}
+
+.products-section .magenta {
+    color: #B771F4;
+}
+
+.products-section .yellow {
+    color: #DBFE01;
+}
+
+.products-section .margin-left {
+    margin-left: 7rem;
+}
+
+.product_image-wrap {
+    background: linear-gradient(112deg, #BAC0C9 0%, #BCC2CC 100%);;
+}
+
+.product-description {
+    color: #FFF;
+    padding: 30px 0 30px 0;
+}
+
+.product-item {
+    padding: 30px;
+}
+
+.product-price {
+    color: #DBFE01;
+}
+
+/* sponsors section styles */
+.sponsors-section {
+    background: #252525;
+    color: #FFF;
+}
+
+.sponsors-section .section-title {
+    padding: 50px 0;
+}
+
+.sponsors {
+    padding-bottom: 20px;
+}
+
+/* footer styles starts */
+
+footer {
+    background: #211F1F;
+    color: #FFF;
+    padding: 60px 0 0 0;
+}
+
+footer img {
+    max-height: 90px;
+}
+
+footer hr {
+    border: 1px solid;
+    opacity: 25%;
+}
+
+.footer-location {
+    padding: 1rem 0;
+}
+
+.footer-socials i {
+    font-size: 26px;
+    border: 1px solid #DBFE01;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
+/* Front End login styles starts */
+
+.login-title {
+    margin-bottom: 30px;
+  }
+  
+  .login-area {
+    padding-top: 15rem;
+    padding-bottom: 120px;
+    background: url('../frontend/images/blackbike-icon.png');
+  }
+  
+  .login-area .login-content .login-title .title {
+    font-weight: 700;
+    color: #FFF;
+    font-size: 30px;
+  }
+
+  .login-area .login-content {
+    color: #FFF;
+  }
+  
+  .login-area .login-content .input-box input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    padding-left: 30px;
+  }
+  
+  .login-area .login-content .input-box span {
+    padding-bottom: 15px;
+    font-size: 15px;
+    display: inline-block;
+  }
+  
+  .login-area .login-content .input-box {
+    margin-top: 20px;
+  }
+  
+  .login-area .login-content .input-btn button {
+    width: 100%;
+  }
+
+  .login-area .login-content .input-btn p {
+    padding-top: 20px;
+  }
+  
+  .login-area .login-content .input-text p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #666;
+    line-height: 26px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  
+  .login-area .login-content .input-text p a {
+    color: #DBFE01;
+  }
+
+  .login-btn {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+
+
+  /* Responsive styles */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    section, footer {
+        padding: 20px;
+    }
+
+    .hero-section {
+        height: 100vh;
+        padding-top: 10rem;
+    }
+
+    .hero-content p {
+        left: auto;
+    }
+
+    .hero_right-content {
+        padding-left: 1rem;
+    }
+
+    .hero_left-content h1 {
+        font-size: 24px;
+        padding-bottom: 1rem;
+    }
+
+    .hero_right-content {
+        padding-top: 2rem;
+    }
+
+    .time, .date {
+        font-size: 26px;
+        line-height: normal;
+    }
+
+
+    /* ticket Strocks */
+    .ticket-strocks {
+        height: 10vh;
+    }
+
+    .ticket-strocks h1 {
+        font-size: 9px;
+    }
+
+    .section-title .left, .section-title .right {
+        padding-left: 0;
+    }
+
+    .celebrity-section {
+        padding: 20px;
+    }
+
+    .celebrity-images {
+        padding-top: 5rem;
+    }
+
+    .celebrity-images {
+        justify-content: start !important;
+    }
+
+    .celebrity-images img {
+        max-width: 195px;
+    }
+
+    .get-involved_card-content {
+        padding: 28px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

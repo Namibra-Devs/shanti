@@ -9,7 +9,7 @@
             <!-- Cart Menu -->
             <div class="d-flex justify-content-md-between justify-content-center align-items-center">
                 <div class="ms-5">
-                    <a href="./productview.html"
+                    <a href="{{ route('front.product') }}"
                         class="mb-lg-4 mb-0 text-decoration-none text-dark text-uppercase d-none d-md-block">
                         <img src="{{ asset('assets/frontend/images/back.svg') }}" alt="Back Button" />
                         Back</a>
@@ -39,7 +39,7 @@
                         class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-lg-sart my-5 w-100">
                         <div
                             class="item d-flex justify-content-md-between justify-content-center align-items-center align-items-md-start flex-column flex-md-row gap-4 w-100">
-                            <img src="./src/images/Painting2.png" alt="" class="cart-img">
+                            <img src="{{asset('assets/frontend/images/product/featured/'.$product->feature_image)}}" alt="" class="cart-img">
                             <div class="w-100">
                                 <a href="{{ route('front.product.details', $product->slug) }}">
                                     <h5 class="my-4">{{ convertUtf8($item['name']) }}</h5>
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="price-edit">
-                            <p class="my-4 fw-bold text-start">₵ <span class="price">{{ $item['price'] }}</span></p>
+                            <p class="my-4 fw-bold text-start">₵ <span class="price cart_price">{{ $item['price'] }}</span></p>
                             <div class="mt-md-5 pt-mf-5">
 
 
@@ -67,7 +67,7 @@
                                         <button class="btn border-0 text-muted">
                                             <img src="{{ asset('assets/frontend/images/delete.svg') }}" alt=""
                                                 class="">
-                                            <span>{{ route('cart.item.remove', $id) }}</span>
+                                            <span><a style="text-decoration: none" href="{{ route('cart.item.remove', $id) }}">Remove</a></span>
                                         </button>
                                     </div>
 
@@ -106,8 +106,13 @@
                             }
                         }
                     @endphp
-                    <p class="total-price m-0">₵ <span class="id="total"">{{ $cartTotal }}</span></p>
+                                                <p class="cart-item-view">Total items: {{ $cart ? $countitem : 0 }}</p>
+                    <p class="total-price m-0">₵ <span class="cart-total-view" id="total">{{ $cartTotal }}</span></p>
                 @endif
+            </div>
+            <div class="update-cart float-right d-inline-block">
+                <button class="main-btn main-btn-2" id="cartUpdate" data-href="{{ route('cart.update') }}"
+                    type="button"><span>{{ __('Update Cart') }}</span></button>
             </div>
 
             <div
@@ -127,4 +132,8 @@
         </div>
 
     </main>
+
+    <script src="{{ asset('assets/frontend/js/jquery.ui.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/product.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/cart.js') }}"></script>
 @endsection

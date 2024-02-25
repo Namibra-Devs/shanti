@@ -21,12 +21,6 @@
 
             <div class="row my-5 justify-content-around">
 
-                @foreach ($cart as $id => $item)
-                            @php
-                                $product = App\Product::findOrFail($id);
-                            @endphp
-                @endforeach
-
                 <div class="col-lg-5 col-11">
                     <img src="{{ asset('assets/frontend/images/product/ringbig.png') }}" alt=""
                         class="img-fluid w-100 mb-2">
@@ -129,10 +123,10 @@
                                     class="btn text-uppercase btn-light border border-dark-subtle border-2 px-5 addcart">Add
                                     to cart</a>
                             </div>
-                            <div class="">
+                            {{-- <div class="">
                                 <button class="btn text-uppercase btn-light"><img src="./src/images/heart.svg"
                                         alt=""></button>
-                            </div>
+                            </div> --}}
                         </div>
     
                 </form>
@@ -148,7 +142,7 @@
                     <div class="card border-0">
                         <div class="card-body">
                             <div class="item">
-                                <img src="./src/images/Painting.png" alt="image" class="w-100" />
+                                <img src="{{ asset('assets/frontend/images/Painting.png') }}" alt="image" class="w-100" />
                                 <div class="mt-2 d-flex justify-content-between align-content-center my-2">
                                     <div>
                                         <a href="./productview.html" class="text-decoration-none text-dark">BUTTERFLY

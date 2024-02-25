@@ -9,7 +9,7 @@
 
         <div class="col-8">
             <div class="logo text-center pt-5">
-                <img src="./src/images/logo.svg" alt="" class="img-fluid" />
+                <img src="{{ asset('assets/frontend/images/logo.svg') }}" alt="" class="img-fluid" />
 
                 <div class="text-center">
                     <h1 class="pt-5 login-header">Hello, Let's Sign You In</h1>
@@ -50,7 +50,7 @@
                     <button type="submit" class="btn btn-dark w-100 my-3">SIGN IN</button>
                     <div class="text-center">
                         <a href="signup.html" class="text-decoration-none text-black-50 px-1">CREATE AN
-                            ACCOUNT<span><img src="./src/images/arrow-right.svg" alt=""></span></a></p>
+                            ACCOUNT<span><img src="{{ asset('assets/frontend/images/arrow-right.svg') }}" alt=""></span></a></p>
                     </div>
                 </form>
             </div>

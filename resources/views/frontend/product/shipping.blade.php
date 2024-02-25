@@ -32,7 +32,17 @@
           <div class="col-md-6 col-12">
               <label for="validationCustom01" class="form-label">First name<span
                       class="text-danger fw-bold">*</span></label>
-              <input type="text" class="form-control" id="validationCustom01" placeholder="John" required>
+                      @php
+                                            $sfname = '';
+                                            if (empty(old())) {
+                                                if (Auth::check()) {
+                                                    $sfname = Auth::user()->shpping_fname;
+                                                }
+                                            } else {
+                                                $sfname = old('shpping_fname');
+                                            }
+                                        @endphp
+              <input type="text" class="form-control" id="validationCustom01" placeholder="John" required value="{{ $sfname }}"">
               <div class="valid-feedback">
                   Looks good!
               </div>
@@ -40,7 +50,17 @@
           <div class="col-md-6 col-12">
               <label for="validationCustom02" class="form-label">Last name<span
                       class="text-danger fw-bold">*</span></label>
-              <input type="text" class="form-control" id="validationCustom02" placeholder="Doe" required>
+                      @php
+                                            $slname = '';
+                                            if (empty(old())) {
+                                                if (Auth::check()) {
+                                                    $slname = Auth::user()->shpping_lname;
+                                                }
+                                            } else {
+                                                $slname = old('shpping_lname');
+                                            }
+                                        @endphp
+              <input type="text" class="form-control" id="validationCustom02" placeholder="Doe" required value="{{ $slname }}">
               <div class="valid-feedback">
                   Looks good!
               </div>
@@ -49,8 +69,18 @@
           <div class="col-md-6 col-12">
               <label for="validationCustom03" class="form-label">Phone Number<span
                       class="text-danger fw-bold">*</span></label>
-              <input type="text" placeholder="+233 54 325 2085" class="form-control"
-                  id="validationCustom03" required>
+                      @php
+                                            $snumber = '';
+                                            if (empty(old())) {
+                                                if (Auth::check()) {
+                                                    $snumber = Auth::user()->shpping_number;
+                                                }
+                                            } else {
+                                                $snumber = old('shpping_number');
+                                            }
+                                        @endphp
+              <input type="text" placeholder="+233 20 000 0000" class="form-control"
+                  id="validationCustom03" required value="{{ $snumber }}">
               <div class="invalid-feedback">
                   Please provide a valid city.
               </div>
@@ -58,8 +88,18 @@
           <div class="col-md-6 col-12">
               <label for="validationCustom03" class="form-label">Email Address<span
                       class="text-danger fw-bold">*</span></label>
+                      @php
+                                            $smail = '';
+                                            if (empty(old())) {
+                                                if (Auth::check()) {
+                                                    $smail = Auth::user()->shpping_email;
+                                                }
+                                            } else {
+                                                $smail = old('shpping_email');
+                                            }
+                                        @endphp
               <input type="email" placeholder="username@email.com" class="form-control"
-                  id="validationCustom03" required>
+                  id="validationCustom03" required value="{{ $semail }}">
               <div class="invalid-feedback">
                   Please provide a valid city.
               </div>
@@ -75,8 +115,8 @@
                           <div class="d-flex justify-content-between align-items-center g-3">
                               <div class="mx-2">
                                   <span class="deliver-type d-block text-muted">Standard Delivery</span>
-                                  <span class="deliver-date d-block text-muted">Arrives by Wed 10/26 - Fri
-                                      10/28</span>
+                                  {{-- <span class="deliver-date d-block text-muted">Arrives by Wed 10/26 - Fri
+                                      10/28</span> --}}
                               </div>
                               <div>
                                   <span class="fw-bold" id="delivery-cost">Free</span>
@@ -110,8 +150,18 @@
           <div class="col-12">
               <label for="validationCustom03" class="form-label">Address<span
                       class="text-danger fw-bold">*</span></label>
+                      @php
+                                            $saddress = '';
+                                            if (empty(old())) {
+                                                if (Auth::check()) {
+                                                    $saddress = Auth::user()->shpping_address;
+                                                }
+                                            } else {
+                                                $saddress = old('shpping_address');
+                                            }
+                                        @endphp
               <input type="text" placeholder="125 Main St." class="form-control" id="validationCustom03"
-                  required>
+                  required value="{{ $saddress }}">
               <div class="invalid-feedback">
                   Please provide a valid city.
               </div>
@@ -119,8 +169,18 @@
           <div class="col-md-8 col-12">
               <label for="validationCustom03" class="form-label">City<span
                       class="text-danger fw-bold">*</span></label>
+                      @php
+                                            $scity = '';
+                                            if (empty(old())) {
+                                                if (Auth::check()) {
+                                                    $scity = Auth::user()->shpping_city;
+                                                }
+                                            } else {
+                                                $scity = old('shpping_city');
+                                            }
+                                        @endphp
               <input type="text" placeholder="Tamale" class="form-control" id="validationCustom03"
-                  required>
+                  required value="{{ $scity }}">
               <div class="invalid-feedback">
                   Please provide a valid city.
               </div>

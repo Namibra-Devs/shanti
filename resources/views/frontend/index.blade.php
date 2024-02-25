@@ -63,23 +63,24 @@
         <div class="page-content page-container d-none d-lg-block" id="page-content">
             <div class="padding">
                 <div class="row">
+                    @foreach ($products as $product)    
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card border-0 rounded-0 shadow-none bg-transparent">
                             <div class="card-body">
                                 <div class="owl-carousel">
                                     <div class="item">
-                                        <img src="{{ asset('assets/frontend/images/Painting.png') }}" alt="image" />
+                                        <img src="{{asset('assets/frontend/images/product/featured/'.$product->feature_image)}}" alt="image" />
                                         <div class="mt-2 d-flex justify-content-between align-content-center my-2">
                                             <div>
-                                                <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                                                    <p class="fw-bold"><span>₵</span>2,499</p>
+                                                <a href="{{route('front.product.details',$product->slug)}}" class="text-decoration-none text-dark">{{strlen($product->title) > 40 ? mb_substr($product->title,0,40,'utf-8') . '...' : $product->title}}
+                                                    <p class="fw-bold"><span>₵</span>{{$product->current_price}}</p>
                                                 </a>
                                             </div>
 
-                                            <div>
+                                            {{-- <div>
                                                 <button class="btn"><img src="{{ asset('assets/frontend/images/heart.svg') }}"
                                                         alt=""></button>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
 
@@ -87,6 +88,8 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    
                 </div>
             </div>
         </div>

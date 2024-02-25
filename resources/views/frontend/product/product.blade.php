@@ -137,9 +137,9 @@
                                             </a>
                                         </div>
     
-                                        <div>
+                                        {{-- <div>
                                             <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>

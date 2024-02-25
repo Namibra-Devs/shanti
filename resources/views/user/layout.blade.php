@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blac Bike @yield('pagename')</title>
+    <title>Shanti Jewelry @yield('pagename')</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/frontend/images/logo.svg') }}" type="image/x-icon">
     <!-- bootstrap css -->
@@ -41,8 +41,11 @@
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/common-style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}" />
     <!-- responsive css -->
     <link rel="stylesheet" href="{{ asset('assets/user/css/responsive.css') }}">
+    
 
     <!-- dark version css -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/frontend/css/dark.css') }}"> --}}

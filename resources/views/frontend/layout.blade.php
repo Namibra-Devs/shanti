@@ -37,10 +37,10 @@
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/images/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="./src/favico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./src/favico/favicon-16x16.png">
-    <link rel="manifest" href="./src/favico/site.webmanifest">
-    <link rel="mask-icon" href="./src/favico/safari-pinned-tab.svg" color="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/frontend/favico/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/frontend/favico/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('assets/frontend/favico/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('assets/frontend/favico/safari-pinned-tab.svg') }}" color="#000000">
     <meta name="msapplication-TileColor" content="#dae0df">
     <meta name="theme-color" content="#ffffff">
 
@@ -64,12 +64,12 @@
                 <li><a href="" class="text-uppercase text-decoration-none text-dark">Shanti jewelry</a></li>
                 <li class="px-5">
                     <div class="dropdown">
-                        <button class="btn p-0 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{-- <button class="btn p-0 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             EN
                             <span class="w-100">
-                                <img src="asset('assets/images/arrow-down.svg')" alt="">
+                                <img src="asset('{{ asset('assets/frontend/images/arrow-down.svg') }}')" alt="">
                             </span>
-                        </button>
+                        </button> --}}
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">English</a></li>
                             <li><a class="dropdown-item" href="#">Chinese</a></li>

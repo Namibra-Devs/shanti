@@ -96,7 +96,7 @@ body {
 }
 
 .hero-img {
-  background-image: url('./src/images/hero-img.svg');
+  background-image: url('../images/hero-img.svg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -336,4 +336,67 @@ footer {
 
 .socials {
     color: var(--clr-lgt-dark);
+}
+
+/* Product buttons */
+
+.product-quantity button {
+  width: 43px;
+  height: 33px;
+  padding: 0;
+  background-color: #fff;
+  font-size: 18px;
+  color: #838b97;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .product-quantity button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.product-quantity input {
+  width: 43px;
+  height: 33px !important;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+  text-align: center;
+  margin: 0 0;
+  color: #838b97;
+  border-left: 0;
+  border-right: 0;
+}
+
+@media (max-width: 767px) {
+  .product-quantity input {
+    height: 40px;
+  }
+}
+
+.product-btns .btns a {
+  font-weight: 600;
+  padding: 20px;
+  margin-left: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid #25d06f;
+  display: block;
+  position: relative;
+  padding: 15px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #25d06f;
+}
+
+.product-btns .btns a:hover {
+  background-color: transparent;
+  color: #25d06f;
 }

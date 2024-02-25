@@ -23,7 +23,7 @@
             <div class=" m-auto">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-uppercase" href="./cart.html"><img src="{{ asset('assets/frontend/images/cart.svg') }}"
+                        <a class="nav-link text-uppercase" href="{{ route('front.cart') }}"><img src="{{ asset('assets/frontend/images/cart.svg') }}"
                                 alt="" class="pe-2" />
                             <span class="position-relative">
 

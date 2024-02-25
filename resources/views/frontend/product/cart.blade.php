@@ -1,6 +1,6 @@
 @extends('frontend.layout')
 
-@section()
+@section('content')
     <main role="main" class="container mt-5">
         <!-- Menu and Filter -->
 
@@ -11,7 +11,7 @@
                 <div class="ms-5">
                     <a href="./productview.html"
                         class="mb-lg-4 mb-0 text-decoration-none text-dark text-uppercase d-none d-md-block">
-                        <img src="./src/images/back.svg" alt="Back Button" />
+                        <img src="{{ asset('assets/frontend/images/back.svg') }}" alt="Back Button" />
                         Back</a>
                 </div>
 
@@ -29,128 +29,96 @@
                 </div>
             </div>
 
-            <!-- Cart Item -->
-            <div
-                class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-lg-sart my-5 w-100">
-                <div
-                    class="item d-flex justify-content-md-between justify-content-center align-items-center align-items-md-start flex-column flex-md-row gap-4 w-100">
-                    <img src="./src/images/Painting2.png" alt="" class="cart-img">
-                    <div class="w-100">
-                        <h5 class="my-4">BUTTERFLY CLIP</h5>
-                        <p class="text-uppercase text-muted m-0">Size: <span id="size">6.5</span></p>
-                        <p class="text-uppercase text-muted m-0">Colour: <span id="color"
-                                class="text-capitalize">Silver</span></p>
-                    </div>
+            @if ($cart != null)
+                @foreach ($cart as $id => $item)
+                    @php
+                        $product = App\Product::findOrFail($id);
+                    @endphp
 
-                </div>
-
-                <div class="price-edit">
-                    <p class="my-4 fw-bold text-start">₵ <span class="price">2,499.00</span></p>
-                    <div class="mt-md-5 pt-mf-5">
-
-
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-lg-sart my-5 w-100">
                         <div
-                            class="counter mt-4 d-flex gap-5 justify-content-between align-items-center w-100 gap-5 pt-md-5">
-                            <div class="edit-deletebtns d-flex">
-                                <button class="btn border-0 text-muted">
-                                    <img src="./src/images/edit.svg" alt="">
-                                    <span>Edit</span>
-                                </button>
-                                <button class="btn border-0 text-muted">
-                                    <img src="./src/images/delete.svg" alt="" class="">
-                                    <span>Delete</span>
-                                </button>
+                            class="item d-flex justify-content-md-between justify-content-center align-items-center align-items-md-start flex-column flex-md-row gap-4 w-100">
+                            <img src="./src/images/Painting2.png" alt="" class="cart-img">
+                            <div class="w-100">
+                                <a href="{{ route('front.product.details', $product->slug) }}">
+                                    <h5 class="my-4">{{ convertUtf8($item['name']) }}</h5>
+                                </a>
+                                <p class="text-uppercase text-muted m-0">Size: <span
+                                        id="size">{{ $item['size'] }}</span></p>
+                                <p class="text-uppercase text-muted m-0">Colour: <span id="color"
+                                        class="text-capitalize">Silver</span></p>
                             </div>
-
-                            <!-- Counter -->
-                            <div
-                                class="counters d-flex justify-content-between align-content-center border border-2 border-black-50 px-1 py-2 rounded-1">
-                                <button type="button" class="btn p-0 px-2 border-0" id="decrease"><img
-                                        src="./src/images/minus.svg" alt=""></button>
-                                <div>
-
-                                    <p class="m-0 px-2" id="count">1</p>
-                                </div>
-
-                                <button type="button" class="btn p-0 px-2 border-0" id="increase">
-                                    <img src="./src/images/plus.svg" alt="" class="m-0 p-0">
-                                </button>
-                            </div>
-
 
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Cart Item -->
-            <div
-                class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-lg-sart my-5 w-100 border-bottom pb-5 border-2 ">
-                <div
-                    class="item d-flex justify-content-md-between justify-content-center align-items-center align-items-md-start flex-column flex-md-row gap-4 w-100">
-                    <img src="./src/images/Painting2.png" alt="" class="cart-img">
-                    <div class="w-100">
-                        <h5 class="my-4">BUTTERFLY CLIP</h5>
-                        <p class="text-uppercase text-muted m-0">Size: <span id="size">6.5</span></p>
-                        <p class="text-uppercase text-muted m-0">Colour: <span id="color"
-                                class="text-capitalize">Silver</span></p>
-                    </div>
-
-                </div>
-
-                <div class="price-edit">
-                    <p class="my-4 fw-bold text-start">₵ <span>2,499.00</span></p>
-                    <div class="mt-md-5 pt-mf-5">
+                        <div class="price-edit">
+                            <p class="my-4 fw-bold text-start">₵ <span class="price">{{ $item['price'] }}</span></p>
+                            <div class="mt-md-5 pt-mf-5">
 
 
-                        <div
-                            class="counter mt-4 d-flex gap-5 justify-content-between align-items-center w-100 gap-5 pt-md-5">
-                            <div class="edit-deletebtns d-flex">
-                                <button class="btn border-0 text-muted">
-                                    <img src="./src/images/edit.svg" alt="">
-                                    <span>Edit</span>
-                                </button>
-                                <button class="btn border-0 text-muted">
-                                    <img src="./src/images/delete.svg" alt="" class="">
-                                    <span>Delete</span>
-                                </button>
-                            </div>
+                                <div
+                                    class="counter mt-4 d-flex gap-5 justify-content-between align-items-center w-100 gap-5 pt-md-5">
+                                    <div class="edit-deletebtns d-flex">
+                                        <button class="btn border-0 text-muted">
+                                            <img src="{{ asset('assets/frontend/images/edit.svg') }}" alt="">
+                                            <span>Edit</span>
+                                        </button>
+                                        <button class="btn border-0 text-muted">
+                                            <img src="{{ asset('assets/frontend/images/delete.svg') }}" alt=""
+                                                class="">
+                                            <span>{{ route('cart.item.remove', $id) }}</span>
+                                        </button>
+                                    </div>
 
-                            <!-- Counter -->
-                            <div
-                                class="counters d-flex justify-content-between align-content-center border border-2 border-black-50 px-1 py-2 rounded-1">
-                                <button type="button" class="btn p-0 px-2 border-0" id="decrease1"><img
-                                        src="./src/images/minus.svg" alt=""></button>
-                                <div>
+                                    <!-- Counter -->
+                                    <div class="product-quantity d-flex mb-35" id="quantity">
+                                        <button type="button" id="sub" class="sub">-</button>
+                                        <input type="text" class="cart_qty" id="1" value="{{ $item['qty'] }}" />
+                                        <button type="button" id="add" class="add">+</button>
+                                    </div>
 
-                                    <p class="m-0 px-2" id="count1">1</p>
+
                                 </div>
-
-                                <button type="button" class="btn p-0 px-2 border-0" id="increase1">
-                                    <img src="./src/images/plus.svg" alt="" class="m-0 p-0">
-                                </button>
                             </div>
-
-
                         </div>
                     </div>
+                @endforeach
+            @else
+                <div class="bg-light py-5 text-center">
+                    <h3 class="text-uppercase">{{ __('Cart is empty!') }}</h3>
                 </div>
-            </div>
+            @endif
+
+            <!-- Cart Item -->
 
             <!-- Total -->
             <div class="total fw-bold d-flex justify-content-between px-4 mt-0 align-items-center">
                 <h5 class="m-0 fw-light">Total</h5>
-                <p class="total-price m-0">₵ <span class="id="total"">5000</span></p>
+                @if ($cart != null)
+                    @php
+                        $cartTotal = 0;
+                        $countitem = 0;
+                        if ($cart) {
+                            foreach ($cart as $p) {
+                                $cartTotal += $p['price'] * $p['qty'];
+                                $countitem += $p['qty'];
+                            }
+                        }
+                    @endphp
+                    <p class="total-price m-0">₵ <span class="id="total"">{{ $cartTotal }}</span></p>
+                @endif
             </div>
 
             <div
                 class="shipping-proceed d-flex flex-column flex-md-row gap-2 mt-4 justify-content-lg-end justify-content-center align-items-center">
                 <div class="shippay">
-                    <a href="./collections.html" class="btn px-5 text-uppercase border border-2 rounded-2 w-100">Back
+                    <a href="{{ route('front.product') }}"
+                        class="btn px-5 text-uppercase border border-2 rounded-2 w-100">Back
                         to Collections</a>
                 </div>
                 <div class="shippay">
-                    <a href="./shipping.html"
+                    <a href="{{ route('front.checkout') }}"
                         class="btn px-5 bg-dark text-light text-uppercase border border-2 rounded-2 w-100">PROCEED TO
                         Shipping</a>
                 </div>

@@ -382,7 +382,7 @@ footer {
   margin-left: 25px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border: 1px solid #25d06f;
+  border: 1px solid #544946;
   display: block;
   position: relative;
   padding: 15px 10px;
@@ -393,10 +393,10 @@ footer {
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: #25d06f;
+  background: #544946;
 }
 
 .product-btns .btns a:hover {
   background-color: transparent;
-  color: #25d06f;
+  color: #544946;
 }

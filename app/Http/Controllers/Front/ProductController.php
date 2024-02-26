@@ -299,6 +299,7 @@ class ProductController extends Controller
         } else {
             $data['cart'] = null;
         }
+        $data['shippings'] = ShippingCharge::get();
         $data['paystackData'] = PaymentGateway::whereKeyword('paystack')->first();
         $data['paystack'] = $data['paystackData']->convertAutoData();
         $data['discount'] = session()->has('coupon') && !empty(session()->get('coupon')) ? session()->get('coupon') : 0;

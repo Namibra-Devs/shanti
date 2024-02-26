@@ -44,9 +44,19 @@
                             <div class="rate">
                                 <div class="rating" style="width:{{$product->rating * 20}}%"></div>
                             </div>
+
+                            @if ($product->stock > 0)
+                                    <h4 class="badge badge-success">
+                                        <i class="far fa-check-circle"></i> {{__('In Stock')}}
+                                    </h4>
+                                @else
+                                    <h4 class="badge badge-danger">
+                                        <i class="far fa-times-circle"></i> {{__('Out of Stock')}}
+                                    </h4>
+                                @endif
                         </div>
 
-                            <span>{{$product->current_price}}
+                            <span>GH₵ {{$product->current_price}}
                             @if (!empty($product->previous_price))
                                 <del>  <span class="prepice"> {{$product->previous_price}}</span></del>
                             @endif
@@ -65,13 +75,50 @@
                         </div>
                     </div>
 
-                        <div class="actions">
-                            <a class="main-btn cart-btn cart-link d-inline-block" data-href="{{route('add.cart',$product->id)}}">{{__('Add To Cart')}}</a>
-                            <form class="d-inline-block ml-2" method="GET" action="{{route('front.product.checkout',$product->slug)}}">
-                                <input type="hidden" value="" name="qty" id="order_click_with_qty">
-                                <button type="submit" class="main-btn checkout-btn" >{{__('Order Now')}}</button>
-                            </form>
-                        </div>
+                    <div class="actions">
+                            
+                        <form class="d-inline-block ml-2" method="GET"
+                            action="{{ route('front.product.checkout', $product->slug) }}">
+                            <input type="hidden" value="" name="qty" id="order_click_with_qty">
+                            <div class="row flex-start mx-0 product-sizes">
+                                <div class="product-description-label text-body mt-2 pr-2">Sizes
+                                    :
+                                </div>
+                                <div>
+                                    <ul class="list-inline checkbox-alphanumeric checkbox-alphanumeric--style-1 mb-2 mx-1 flex-start row"
+                                        style="padding-left: 0;">
+                                        <div>
+                                            <li class="for-mobile-capacity">
+                                                <input type="radio" id="choice_1-M" name="choice_1" value="M" checked="">
+                                                <label style="font-size: 12px;" for="choice_1-M">M</label>
+                                            </li>
+                                        </div>
+                                        <div>
+                                            <li class="for-mobile-capacity">
+                                                <input type="radio" id="choice_1-L" name="choice_1" value="L">
+                                                <label style="font-size: 12px;" for="choice_1-L">L</label>
+                                            </li>
+                                        </div>
+                                        <div>
+                                            <li class="for-mobile-capacity">
+                                                <input type="radio" id="choice_1-XL" name="choice_1" value="XL">
+                                                <label style="font-size: 12px;" for="choice_1-XL">XL</label>
+                                            </li>
+                                        </div>
+                                        <div>
+                                            <li class="for-mobile-capacity">
+                                                <input type="radio" id="choice_1-2XL" name="choice_1" value="2XL">
+                                                <label style="font-size: 12px;" for="choice_1-2XL">2XL</label>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="main-btn cart-btn cart-link d-inline-block"
+                            data-href="{{ route('add.cart', $product->id) }}">{{ __('Add To Cart') }}</a>
+                            <button type="submit" class="main-btn checkout-btn">{{ __('Order Now') }}</button>
+                        </form>
+                    </div>
 
                     <div class="product-social-icon social-link a2a_kit a2a_kit_size_32">
                         <ul class="social-share">

@@ -125,16 +125,22 @@
 @elseif(request()->path() == 'admin/product/orders/report') show @endif"
                             id="category">
                             <ul class="nav nav-collapse">
-                                {{-- @if ($bex->catalog_mode == 0) --}}
-                                {{-- <li
+                                <li
+                                        class="
+    @if (request()->path() == 'admin/shipping') active
+    @elseif(request()->routeIs('admin.shipping.edit')) active @endif">
+                                        <a href="{{ route('admin.shipping.index') }}">
+                                            <span class="sub-item">Shipping Charges</span>
+                                        </a>
+                                    </li>
+                                <li
                                     class="
 @if (request()->path() == 'admin/coupon') active
 @elseif(request()->routeIs('admin.coupon.edit')) active @endif">
                                     <a href="{{ route('admin.coupon.index') }}">
                                         <span class="sub-item">Coupons</span>
                                     </a>
-                                </li> --}}
-                                {{-- @endif --}}
+                                </li>
                                 <li class="submenu">
                                     <a data-toggle="collapse" href="#productManagement"
                                         aria-expanded="{{ request()->path() == 'admin/category' || request()->is('admin/category/*/edit') || request()->routeIs('admin.product.type') || request()->routeIs('admin.product.create') || request()->routeIs('admin.product.index') || request()->routeIs('admin.product.edit') ? 'true' : 'false' }}">
@@ -259,8 +265,7 @@
                             id="event_manage">
                             <ul class="nav nav-collapse">
                                 <li class="@if (request()->path() == 'admin/event/categories') active @endif">
-                                    <a
-                                        href="{{ route('admin.event.category.index') }}">
+                                    <a href="{{ route('admin.event.category.index') }}">
                                         <span class="sub-item">Category</span>
                                     </a>
                                 </li>

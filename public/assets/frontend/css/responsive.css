@@ -234,7 +234,7 @@
         font-weight: 400
     }
     ul.slicknav_nav li a.boxed-btn:hover {
-        background-color: #25d06f
+        background-color: #544946
     }
     .slicknav_nav .slicknav_row,
     .slicknav_nav a,
@@ -260,11 +260,11 @@
         margin-bottom: 5px
     }
     .slicknav_nav .slicknav_row:hover {
-        background: #25d06f;
+        background: #544946;
         border-radius: 0
     }
     .slicknav_nav a:hover {
-        background: #25d06f;
+        background: #544946;
         color: #fff;
         border-radius: 0
     }
@@ -502,7 +502,7 @@
         display: none
     }
     h5.service-title {
-        color: #25d06f;
+        color: #544946;
         margin-top: 8px
     }
     .gallery-section div[class*=col-]:nth-last-child(2) .single-pic,
@@ -1135,7 +1135,7 @@
     .case-types ul li a {
         display: block;
         width: 100%;
-        background-color: #25d06f;
+        background-color: #544946;
         padding: 12px 0;
         color: #fff;
         border-radius: 5px
@@ -1155,7 +1155,7 @@
         height: auto
     }
     .case-types ul li a {
-        border: 1px solid #25d06f;
+        border: 1px solid #544946;
         color: #fff
     }
     .case-types ul li a:hover {
@@ -1365,7 +1365,7 @@
     }
     .single-contact-info i {
         margin-right: 15px;
-        color: #25d06f;
+        color: #544946;
         font-size: 20px
     }
     .blog-details-title {

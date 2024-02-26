@@ -111,6 +111,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin', 'checkstatus']
     Route::post('/category/delete', 'Admin\ProductCategory@delete')->name('admin.category.delete');
     Route::post('/category/bulk-delete', 'Admin\ProductCategory@bulkDelete')->name('admin.pcategory.bulk.delete');
 
+    Route::get('/shipping', 'Admin\ShopSettingController@index')->name('admin.shipping.index');
+    Route::post('/shipping/store', 'Admin\ShopSettingController@store')->name('admin.shipping.store');
+    Route::get('/shipping/{id}/edit', 'Admin\ShopSettingController@edit')->name('admin.shipping.edit');
+    Route::post('/shipping/update', 'Admin\ShopSettingController@update')->name('admin.shipping.update');
+    Route::post('/shipping/delete', 'Admin\ShopSettingController@delete')->name('admin.shipping.delete');
+
     Route::get('/product', 'Admin\ProductController@index')->name('admin.product.index');
     Route::get('/product/create', 'Admin\ProductController@create')->name('admin.product.create');
     Route::post('/product/store', 'Admin\ProductController@store')->name('admin.product.store');
@@ -236,6 +242,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth', 'userstatus', 'setlan
   Route::post('/reset', 'User\UserController@reset')->name('user-reset-submit');
   Route::get('/profile', 'User\UserController@profile')->name('user-profile');
   Route::post('/profile', 'User\UserController@profileupdate')->name('user-profile-update');
+  Route::get('/shipping/details', 'User\UserController@shippingdetails')->name('shpping-details');
+  Route::post('/shipping/details/update', 'User\UserController@shippingupdate')->name('user-shipping-update');
   Route::get('/logout', 'User\LoginController@logout')->name('user-logout');
   Route::get('/billing/details', 'User\UserController@billingdetails')->name('billing-details');
   Route::post('/billing/details/update', 'User\UserController@billingupdate')->name('billing-update');

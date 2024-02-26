@@ -141,7 +141,7 @@
                             </a> <br>
 
                                 <span>
-                                    GHS
+                                    GH₵ {{$product->current_price}}
                                     @if (!empty($product->previous_price))
                                         <del>  <span class="prepice"> {{$product->previous_price}}</span></del>
                                     @endif

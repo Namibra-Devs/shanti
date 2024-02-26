@@ -32,7 +32,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 15px;
-    color: #DBFE01;
+    color: #544946;
 }
 
 .product-area .shop-dropdown{
@@ -55,8 +55,8 @@
 }
 
 .product-area .shop-dropdown .nice-select::after {
-    border-bottom: 2px solid #DBFE01;
-    border-right: 2px solid #DBFE01;
+    border-bottom: 2px solid #544946;
+    border-right: 2px solid #544946;
 }
 
 
@@ -84,7 +84,7 @@
     bottom: -14px;
     height: 2px;
     width: 10px;
-    background: #DBFE01;
+    background: #544946;
 }
 
 .product-area .shop-sidebar .shop-box .sidebar-title .title::after {
@@ -94,7 +94,7 @@
     bottom: -14px;
     height: 2px;
     width: 25px;
-    background: #DBFE01;
+    background: #544946;
 }
 
 
@@ -149,7 +149,7 @@
 
 .product-area .shop-tag .tag-item ul li a:hover {
     color: #fff;
-    background: #DBFE01;
+    background: #544946;
 }
 
 .product-area .shop-price .price-item {
@@ -159,7 +159,7 @@
 .product-area .shop-price .price-item .line {
     height: 4px;
     width: 100%;
-    background: #DBFE01;
+    background: #544946;
     position: relative;
     margin-bottom: 24px;
 }
@@ -172,7 +172,7 @@
     transform: translateY(-50%);
     height: 10px;
     width: 10px;
-    background: #DBFE01;
+    background: #544946;
     cursor: pointer;
 }
 
@@ -237,7 +237,7 @@
     height: 40px;
     width: 40px;
     background: #fff;
-    color: #DBFE01;
+    color: #544946;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
@@ -254,7 +254,7 @@
 .product-area .shop-item .shop-content span {
     font-size: 14px;
     font-weight: 700;
-    color: #DBFE01;
+    color: #544946;
     padding-bottom: 13px;
 }
 
@@ -330,8 +330,8 @@
 }
 
 .checkbox_common li input[type="checkbox"]:checked + label span {
-    background: #25d06f;
-    border-color: #25d06f;
+    background: #544946;
+    border-color: #544946;
 }
 
 .checkbox_common li input[type="checkbox"]:checked + label span:before {
@@ -413,7 +413,7 @@
     width: 40px;
     text-align: center;
     line-height: 40px;
-    background: #25d06f;
+    background: #544946;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -437,7 +437,7 @@
     width: 40px;
     text-align: center;
     line-height: 40px;
-    background: #25d06f;
+    background: #544946;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -554,13 +554,13 @@
     transition: all linear 0.3s;
 }
 .product-details-area .product-details-content .product-icons-item-1 ul li a:hover {
-	color: #25d06f;
+	color: #544946;
 }
 
 .product-details-area .product-details-content .product-icons-item-1 ul li:first-child a {
     padding: 0 15px;
-    border-left: 1px dashed #25d06f;
-    border-right: 1px dashed #25d06f;
+    border-left: 1px dashed #544946;
+    border-right: 1px dashed #544946;
     line-height: 20px;
     margin-right: 9px;
 }
@@ -583,12 +583,12 @@
     padding-top: 15px;
 }
 .product-details-area .product-details-content .product-social-icon ul li a:hover{
-	color: #25d06f;
+	color: #544946;
 }
 
 .product-details-area .product-details-content .product-details-tags ul li {
     font-size: 16px;
-    color: #25d06f;
+    color: #544946;
     line-height: 30px;
     font-weight: 400;
 
@@ -643,7 +643,7 @@
 	margin-left: 25px;
 	-webkit-transition: .5s;
 	transition: .5s;
-	border: 1px solid #25d06f;
+	border: 1px solid #544946;
 	display: block;
 	position: relative;
 	padding: 15px 10px;
@@ -654,13 +654,13 @@
 	text-decoration: none;
 	-webkit-transition: .5s;
 	transition: .5s;
-	background: #25d06f;
+	background: #544946;
 }
 
 
 .product-btns .btns a:hover{
 	background-color: transparent;
-	color: #25d06f;
+	color: #544946;
 }
 
 
@@ -698,11 +698,11 @@
 	bottom: -2px;
 	height: 0px;
 	width: 100%;
-	background: #25d06f; 
+	background: #544946; 
 }
 
 .shop-tab-area .nav .nav-item .nav-link.active {
-	color: #25d06f; 
+	color: #544946; 
 }
 
 .shop-tab-area .nav .nav-item .nav-link.active::before {
@@ -753,7 +753,7 @@
     bottom: -200px;
     height: 100%;
     width: 100%;
-    background-color: rgba(37, 208, 111, 0.6);
+    background-color: #5449468c;
     opacity: 0;
     transition: all linear .3s;
 }
@@ -781,7 +781,7 @@
     height: 40px;
     width: 40px;
     background: #fff;
-    color: #25d06f;
+    color: #544946;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
@@ -798,7 +798,7 @@
 .product-items .shop-item .shop-content span {
     font-size: 14px;
     font-weight: 700;
-    color: #25d06f;
+    color: #544946;
     padding-bottom: 13px;
 }
 
@@ -826,7 +826,7 @@
     display: inline-block;
 }
 .shop-review-area  .shop-review-user ul li i{
-    color: #25d06f;
+    color: #544946;
 }
 .shop-review-area  .shop-review-user ul li:nth-child(4) i{
     color: #ccc;
@@ -890,21 +890,21 @@
     display: inline-block;
 }
 .shop-review-area .shop-review-form .input-box ul li a{
-    color: #25d06f;
+    color: #544946;
 }
 
 
 
 
 .shop-review-area .shop-review-form .input-btn button{
-    background: #25d06f;
+    background: #544946;
     color: #fff;
-    border-color: #25d06f;
+    border-color: #544946;
 }
 
 .shop-review-area .shop-review-form .input-btn button:hover{
     background-color: transparent;
-    color: #25d06f;
+    color: #544946;
 }
 
 
@@ -935,13 +935,13 @@
 }
 
 .ui-slider-horizontal .ui-slider-range {
-    background: #25d06f;
+    background: #544946;
 }
 
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-    border: 1px solid #25d06f;
-    background: #25d06f;
+    border: 1px solid #544946;
+    background: #544946;
     padding-top: 12px !important;
     font-weight: bold;
 }
@@ -997,8 +997,8 @@
     margin-top: 20px;
 }
 .login-area .login-content .input-btn button{
-    background: #25d06f;
-    border-color: #25d06f;
+    background: #544946;
+    border-color: #544946;
     text-transform: uppercase;
 }
 .login-area .login-content .checkbox_common{
@@ -1006,11 +1006,11 @@
 }
 .login-area .login-content .input-btn button:hover{
     background-color: transparent;
-    color: #25d06f;
+    color: #544946;
 }
 
 .login-area .login-content .input-btn a{
-    color: #25d06f;
+    color: #544946;
     margin-top: 20px; 
 }
 
@@ -1024,7 +1024,7 @@
 }
 
 .login-area .login-content .input-text p a{
-    color: #25d06f;
+    color: #544946;
 }
 
 
@@ -1088,7 +1088,7 @@
     width: 2px;
     height: 100%;
     content: "";
-    background: #25d06f;
+    background: #544946;
 }
 
 .checkout-area .exisitng-customer h5 {
@@ -1101,7 +1101,7 @@
     font-weight: 400;
     display: inline-block;
     padding-left: 15px;
-    color: #25d06f;
+    color: #544946;
 }
 
 .checkout-area .coupon {
@@ -1120,7 +1120,7 @@
     width: 2px;
     height: 100%;
     content: "";
-    background: #25d06f;
+    background: #544946;
 }
 
 .checkout-area .coupon h5 {
@@ -1133,7 +1133,7 @@
     font-weight: 400;
     display: inline-block;
     padding-left: 15px;
-    color: #25d06f;
+    color: #544946;
 }
 
 .checkout-area .form form .field-label {
@@ -1204,7 +1204,7 @@
 }
 
 .checkout-area .form form .field-input textarea:focus {
-    border-color: #25d06f;
+    border-color: #544946;
 }
 
 .checkout-area .cart-table tbody tr .qty .input-group-btn-vertical {
@@ -1692,7 +1692,7 @@
     font-size: 18px;
     line-height: 40px;
     text-align: center;
-    background: #25d06f;
+    background: #544946;
 }
 
 .cart-area .cart-table tbody tr td.price {
@@ -1732,7 +1732,7 @@
 }
 
 .cart-area .cart-table tbody tr td .remove span:hover {
-    color: #25d06f;
+    color: #544946;
 }
 
 .cart-middle {
@@ -1771,8 +1771,8 @@
     background: #f6f6f6;
 }
 .cart-middle .apply-coupon .apply-coupon-button button{
-    border: 1px solid #25d06f;
-    background: #25d06f;
+    border: 1px solid #544946;
+    background: #544946;
     color: #fff;
     line-height: 50px;
     padding: 0 20px;
@@ -1781,15 +1781,15 @@
 }
 
 .cart-middle .apply-coupon .apply-coupon-button button:hover {
-    color: #25d06f;
+    color: #544946;
     background-color: transparent;
 }
 
 .cart-middle .update-cart .btn-style-one {}
 
 .cart-middle .update-cart button {
-    border: 1px solid #25d06f;
-    background: #25d06f;
+    border: 1px solid #544946;
+    background: #544946;
     color: #fff;
     line-height: 50px;
     padding: 0 20px;
@@ -1798,7 +1798,7 @@
 
 }
 .cart-middle .update-cart button:hover {
-    color: #25d06f;
+    color: #544946;
     background-color: transparent;
 
 }

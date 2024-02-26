@@ -31,11 +31,15 @@
 
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/common-style.css') }}">
     <link rel="stylesheet" href="{{asset('assets/frontend/css/plugin.min.css')}}">
+    
 
 
     <link rel="stylesheet" href="{{ asset('assets/user/css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon.css') }}">
+
+              <!-- plugin css -->
+              <link rel="stylesheet" href="{{asset('assets/frontend/css/plugin.min.css')}}">
 
 
     <!-- Javascript -->

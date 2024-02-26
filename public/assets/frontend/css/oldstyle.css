@@ -150,7 +150,7 @@ ul.breadcumb li a {
     transition: 0.5s;
 }
 ul.breadcumb li a:hover {
-    color: #25d06f;
+    color: #544946;
 }
 ul.breadcumb li::after {
     position: absolute;
@@ -176,8 +176,8 @@ ul.breadcumb li:last-child::after {
     height: 40px;
     width: 40px;
     line-height: 40px;
-    background-color: #25d06f;
-    border: 1px solid #25d06f;
+    background-color: #544946;
+    border: 1px solid #544946;
     text-align: center;
     border-radius: 3px;
     cursor: pointer;
@@ -188,7 +188,7 @@ ul.breadcumb li:last-child::after {
 }
 .back-to-top:hover {
     background-color: #fff;
-    color: #25d06f;
+    color: #544946;
 }
 .back-to-top.show {
     opacity: 1;
@@ -306,7 +306,7 @@ ul.breadcumb li:last-child::after {
     content: "";
     width: 0;
     height: 3px;
-    background-color: #25d06f;
+    background-color: #544946;
     position: absolute;
     top: 0;
     left: 0;
@@ -317,7 +317,7 @@ ul.breadcumb li:last-child::after {
     content: "";
     width: 0;
     height: 3px;
-    background-color: #25d06f;
+    background-color: #544946;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -331,14 +331,14 @@ ul.breadcumb li:last-child::after {
     width: 100%;
 }
 .main-menu li a:hover {
-    color: #25d06f;
+    color: #544946;
 }
 .main-menu li a.boxed-btn::after,
 .main-menu li a.boxed-btn::before {
     display: none;
 }
 .main-menu li.active a {
-    color: #25d06f;
+    color: #544946;
 }
 .main-menu li a.boxed-btn {
     font-weight: 600;
@@ -346,12 +346,12 @@ ul.breadcumb li:last-child::after {
     margin-left: 20px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    border: 1px solid #25d06f;
+    border: 1px solid #544946;
 }
 .main-menu li a.boxed-btn:hover {
     background-color: #fff;
-    border: 1px solid #25d06f;
-    color: #25d06f;
+    border: 1px solid #544946;
+    color: #544946;
 }
 
 .checkout-area {
@@ -381,7 +381,7 @@ ul.breadcumb li:last-child::after {
     width: 2px;
     height: 100%;
     content: "";
-    background: #25d06f;
+    background: #544946;
 }
 .checkout-area .exisitng-customer h5 {
     color: #222;
@@ -392,7 +392,7 @@ ul.breadcumb li:last-child::after {
     font-weight: 400;
     display: inline-block;
     padding-left: 15px;
-    color: #25d06f;
+    color: #544946;
 }
 .checkout-area .coupon {
     position: relative;
@@ -409,7 +409,7 @@ ul.breadcumb li:last-child::after {
     width: 2px;
     height: 100%;
     content: "";
-    background: #25d06f;
+    background: #544946;
 }
 .checkout-area .coupon h5 {
     color: #222;
@@ -420,7 +420,7 @@ ul.breadcumb li:last-child::after {
     font-weight: 400;
     display: inline-block;
     padding-left: 15px;
-    color: #25d06f;
+    color: #544946;
 }
 .checkout-area .form form .field-label {
     color: #282828;
@@ -482,7 +482,7 @@ ul.breadcumb li:last-child::after {
     transition: all 0.5s ease;
 }
 .checkout-area .form form .field-input textarea:focus {
-    border-color: #25d06f;
+    border-color: #544946;
 }
 .checkout-area .cart-table tbody tr .qty .input-group-btn-vertical {
     display: none;
@@ -892,7 +892,7 @@ p.gateway-desc {
     font-size: 18px;
     line-height: 40px;
     text-align: center;
-    background: #25d06f;
+    background: #544946;
 }
 .cart-area .cart-table tbody .available-info .icon.thm-bg-rmv {
     background: #ff3737;
@@ -928,7 +928,7 @@ p.gateway-desc {
     transition: 0.5s ease;
 }
 .cart-area .cart-table tbody tr td .remove span:hover {
-    color: #25d06f;
+    color: #544946;
 }
 .cart-middle {
     padding-top: 30px;
@@ -962,8 +962,8 @@ p.gateway-desc {
     background: #f6f6f6;
 }
 .cart-middle .apply-coupon .apply-coupon-button button {
-    border: 1px solid #25d06f;
-    background: #25d06f;
+    border: 1px solid #544946;
+    background: #544946;
     color: #fff;
     line-height: 50px;
     padding: 0 20px;
@@ -971,12 +971,12 @@ p.gateway-desc {
     cursor: pointer;
 }
 .cart-middle .apply-coupon .apply-coupon-button button:hover {
-    color: #25d06f;
+    color: #544946;
     background-color: transparent;
 }
 .cart-middle .update-cart button {
-    border: 1px solid #25d06f;
-    background: #25d06f;
+    border: 1px solid #544946;
+    background: #544946;
     color: #fff;
     line-height: 50px;
     padding: 0 20px;
@@ -984,7 +984,7 @@ p.gateway-desc {
     cursor: pointer;
 }
 .cart-middle .update-cart button:hover {
-    color: #25d06f;
+    color: #544946;
     background-color: transparent;
 }
 .cart-bottom {
@@ -1073,7 +1073,7 @@ p.gateway-desc {
     margin-left: 15px;
 }
 .review-show {
-    color: #25d06f;
+    color: #544946;
 }
 .review-none {
     color: #ccc;
@@ -1082,14 +1082,14 @@ a.proceed-checkout-btn {
     padding: 13px 20px;
     height: 50px;
     line-height: 50px;
-    border: 1px solid #25d06f;
+    border: 1px solid #544946;
     text-decoration: none;
-    color: #25d06f;
+    color: #544946;
     background-color: #fff;
     transition: 0.5s;
 }
 a.proceed-checkout-btn:hover {
-    background-color: #25d06f;
+    background-color: #544946;
     color: #fff;
 }
 .checkout-message {

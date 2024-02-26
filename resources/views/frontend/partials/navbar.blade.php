@@ -22,13 +22,13 @@
 
             <div class=" m-auto">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item mx-2">
+                    <li class="nav-item mx-2" id="cartIconWrapper">
                         <a class="nav-link text-uppercase" href="{{ route('front.cart') }}"><img src="{{ asset('assets/frontend/images/cart.svg') }}"
                                 alt="" class="pe-2" />
                             <span class="position-relative">
 
                                 CART<span
-                                    class="badge bg-badge position-absolute top-0 start-100 translate-middle">{{ cartLength() }}</span>
+                                    class="badge bg-badge position-absolute top-0 start-100 translate-middle length">{{ cartLength() }}</span>
                             </span>
                         </a>
                     </li>

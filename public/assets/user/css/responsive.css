@@ -231,7 +231,7 @@
         font-weight: 400;
     }
     ul.slicknav_nav li a.boxed-btn:hover {
-        background-color: #25d06f;
+        background-color: #544946;
     }
     .slicknav_nav a,
     .slicknav_nav .slicknav_row,
@@ -257,11 +257,11 @@
         margin-bottom: 5px;
     }
     .slicknav_nav .slicknav_row:hover {
-        background: #25d06f;
+        background: #544946;
         border-radius: 0px;
     }
     .slicknav_nav a:hover {
-        background: #25d06f;
+        background: #544946;
         color: #fff;
         border-radius: 0px;
     }
@@ -1267,7 +1267,7 @@
     }
     .single-contact-info i {
         margin-right: 15px;
-        color: #25d06f;
+        color: #544946;
         font-size: 20px;
     }
     .blog-details-title {

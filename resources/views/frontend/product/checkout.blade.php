@@ -519,7 +519,7 @@
   </script>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="https://js.paystack.co/v1/inline.js"></script>
-  <script src="{{ asset('assets/frontend/js/shop-checkout-stripe.js') }}"></script>
+  <script src="{{ asset('assets/front/js/shop-checkout-stripe.js') }}"></script>
   @if (session()->has('unsuccess'))
     <script>
       toastr["error"]("{{ __(session('unsuccess')) }}");

@@ -27,12 +27,12 @@
 }
 
 .user-sidebar .links li a.active {
-    color: #25D06F;
+    color: #544946;
     font-weight: 600;
 }
 
 .user-sidebar .links li:hover>a {
-    color: #25D06F;
+    color: #544946;
 }
 
 .order-details,
@@ -155,7 +155,7 @@ a.card-box {
 }
 
 .progress-steps li.active .icon {
-    background: #25D06F;
+    background: #544946;
     color: #fff;
 }
 
@@ -206,12 +206,12 @@ a.card-box {
 }
 
 .main-table .dataTables_wrapper td a.btn {
-    border: 1px solid #25D06F;
+    border: 1px solid #544946;
     transition: all .3s;
 }
 
 .main-table .dataTables_wrapper td a.btn:hover {
-    background: #25D06F;
+    background: #544946;
     border-color: transparent;
     color: #fff;
 }
@@ -238,7 +238,7 @@ a.card-box {
 }
 
 .paginate_button.active .page-link {
-    background-color: #25D06F !important;
+    background-color: #544946 !important;
     border-color: transparent;
 }
 
@@ -246,7 +246,7 @@ a.card-box {
     box-shadow: none;
     border-radius: 0;
     color: #fff;
-    background-color: #25D06F !important;
+    background-color: #544946 !important;
 }
 
 table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
@@ -267,7 +267,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before 
 }
 
 .order-info-area .prinit .btn {
-    background: #25D06F;
+    background: #544946;
     color: #fff;
 }
 
@@ -374,7 +374,7 @@ textarea.form_control {
     left: 0;
     width: 150px;
     height: 40px;
-    background: #25D06F;
+    background: #544946;
     z-index: -1;
     cursor: pointer;
     text-align: center;
@@ -423,7 +423,7 @@ textarea.form_control {
 }
 
 .single_input:checked+.single_input_label:before {
-    border-color: #25D06F;
+    border-color: #544946;
 }
 
 .single_input_label {
@@ -486,7 +486,7 @@ textarea.form_control {
 }
 
 .sigle_input_check:after {
-    background: #25D06F;
+    background: #544946;
     color: #FFFFFF;
     border-color: #ddd;
 }

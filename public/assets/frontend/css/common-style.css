@@ -1660,7 +1660,6 @@ a.boxed-btn {
 .product-area {
   padding-top: 120px;
   padding-bottom: 120px;
-  background: url('../images/celeb-bg.png')
 }
 
 .product-area .shop-search {
@@ -1688,7 +1687,8 @@ a.boxed-btn {
   top: 50%;
   transform: translateY(-50%);
   font-size: 15px;
-  color: #DBFE01;
+  color: #25d06f;
+  color: m;
 }
 
 .product-area .shop-dropdown {
@@ -1711,8 +1711,8 @@ a.boxed-btn {
 }
 
 .product-area .shop-dropdown .nice-select::after {
-  border-bottom: 2px solid #DBFE01;
-  border-right: 2px solid #DBFE01;
+  border-bottom: 2px solid #25d06f;
+  border-right: 2px solid #25d06f;
 }
 
 .product-area .shop-sidebar .shop-box {
@@ -1737,7 +1737,7 @@ a.boxed-btn {
   bottom: -14px;
   height: 2px;
   width: 10px;
-  background: #DBFE01;
+  background: #25d06f;
 }
 
 .product-area .shop-sidebar .shop-box .sidebar-title .title::after {
@@ -1747,7 +1747,7 @@ a.boxed-btn {
   bottom: -14px;
   height: 2px;
   width: 25px;
-  background: #DBFE01;
+  background: #25d06f;
 }
 
 .product-area .shop-category .category-item {
@@ -1803,7 +1803,7 @@ li.active-search a {
 
 .product-area .shop-tag .tag-item ul li a:hover {
   color: #fff;
-  background: #6bc190;
+  background: #25d06f;
 }
 
 .product-area .shop-price .price-item {
@@ -1813,7 +1813,7 @@ li.active-search a {
 .product-area .shop-price .price-item .line {
   height: 4px;
   width: 100%;
-  background: #DBFE01;
+  background: #25d06f;
   position: relative;
   margin-bottom: 24px;
 }
@@ -1826,7 +1826,7 @@ li.active-search a {
   transform: translateY(-50%);
   height: 10px;
   width: 10px;
-  background: #DBFE01;
+  background: #25d06f;
   cursor: pointer;
 }
 
@@ -1891,7 +1891,7 @@ li.active-search a {
   height: 40px;
   width: 40px;
   background: #fff;
-  color: #FF368F;
+  color: #25d06f;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
@@ -1901,7 +1901,7 @@ li.active-search a {
   display: inline-block;
   font-size: 18px;
   font-weight: 600;
-  color: #FFF;
+  color: #222;
   margin-bottom: 10px;
   text-decoration: none;
 }
@@ -1913,13 +1913,13 @@ li.active-search a {
 }
 
 .product-area .shop-item .shop-content a:hover {
-  color: #DBFE01;
+  color: #25d06f;
 }
 
 .product-area .shop-item .shop-content span {
   font-size: 14px;
   font-weight: 700;
-  color: #DBFE01;
+  color: #25d06f;
   padding-bottom: 13px;
 }
 
@@ -1939,6 +1939,7 @@ li.active-search a {
   top: 50%;
   opacity: 1;
 }
+
 
 .actions .main-btn {
   background: #DBFE01;
@@ -3604,7 +3605,7 @@ a.proceed-checkout-btn:hover {
 }
 
 .rate {
-  background-image: url(../img/rate-star.png);
+  background-image: url(../images/rate-star.png);
   background-position: 0 -13px;
   background-repeat: repeat-x;
   height: 13px;
@@ -3615,7 +3616,7 @@ a.proceed-checkout-btn:hover {
 }
 
 .rating {
-  background-image: url(../img/rate-star.png);
+  background-image: url(../images/rate-star.png);
   background-position: 0 0;
   background-repeat: repeat-x;
   height: 13px;

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event Ticket</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="{{asset('assets/front/css/bootstrap3.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/bootstrap3.min.css')}}">
     <style>
         .list-group-item span {
             float: right;

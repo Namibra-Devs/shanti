@@ -1,4 +1,4 @@
-@extends("front.$version.layout")
+@extends("frontend.layout")
 
 @section('breadcrumb-subtitle', __('Success!'))
 @section('breadcrumb-link', __('Success'))

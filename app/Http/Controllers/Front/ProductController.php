@@ -303,7 +303,7 @@ class ProductController extends Controller
         $data['paystack'] = $data['paystackData']->convertAutoData();
         $data['discount'] = session()->has('coupon') && !empty(session()->get('coupon')) ? session()->get('coupon') : 0;
 
-        return view('frontend.product.shipping', $data);
+        return view('frontend.product.checkout', $data);
     }
 
 

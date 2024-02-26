@@ -1,139 +1,137 @@
-@extends('frontend.layout')
+@extends("front.layout")
+
+
+@section('styles')
+<link rel="stylesheet" href="{{asset('assets/frontend/css/jquery-ui.min.css')}}">
+@endsection
 
 @section('content')
-    <main role="main" class="container mt-5">
-        <!-- Menu and Filter -->
 
-        <div class="container my-5 pt-5">
+<!--====== SHOPPING CART PART START ======-->
 
-            <!-- Cart Menu -->
-            <div class="d-flex justify-content-md-between justify-content-center align-items-center">
-                <div class="ms-5">
-                    <a href="{{ route('front.product') }}"
-                        class="mb-lg-4 mb-0 text-decoration-none text-dark text-uppercase d-none d-md-block">
-                        <img src="{{ asset('assets/frontend/images/back.svg') }}" alt="Back Button" />
-                        Back</a>
-                </div>
-
-                <div class="cart">
-                    <button class="btn border-0 header-ff fs-5 text-uppercase fw-bold">1. Cart</button>
-                </div>
-                <div class="shipping d-none d-md-block">
-                    <button class="btn border-0 header-ff fs-5 text-uppercase">2. Shipping</button>
-                </div>
-                <div class="payment d-none d-md-block">
-                    <button class="btn border-0 header-ff fs-5 text-uppercase">3. Payment</button>
-                </div>
-                <div class="summary d-none d-md-block">
-                    <button class="btn border-0 header-ff fs-5 text-uppercase">4. Summary</button>
-                </div>
-            </div>
-
-            @if ($cart != null)
-                @foreach ($cart as $id => $item)
-                    @php
-                        $product = App\Product::findOrFail($id);
-                    @endphp
-
-                    <div
-                        class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-lg-sart my-5 w-100">
-                        <div
-                            class="item d-flex justify-content-md-between justify-content-center align-items-center align-items-md-start flex-column flex-md-row gap-4 w-100">
-                            <img src="{{asset('assets/frontend/images/product/featured/'.$product->feature_image)}}" alt="" class="cart-img">
-                            <div class="w-100">
-                                <a href="{{ route('front.product.details', $product->slug) }}">
-                                    <h5 class="my-4">{{ convertUtf8($item['name']) }}</h5>
-                                </a>
-                                <p class="text-uppercase text-muted m-0">Size: <span
-                                        id="size">{{ $item['size'] }}</span></p>
-                                <p class="text-uppercase text-muted m-0">Colour: <span id="color"
-                                        class="text-capitalize">Silver</span></p>
-                            </div>
-
-                        </div>
-
-                        <div class="price-edit">
-                            <p class="my-4 fw-bold text-start">₵ <span class="price cart_price">{{ $item['price'] }}</span></p>
-                            <div class="mt-md-5 pt-mf-5">
-
-
-                                <div
-                                    class="counter mt-4 d-flex gap-5 justify-content-between align-items-center w-100 gap-5 pt-md-5">
-                                    <div class="edit-deletebtns d-flex">
-                                        <button class="btn border-0 text-muted">
-                                            <img src="{{ asset('assets/frontend/images/edit.svg') }}" alt="">
-                                            <span>Edit</span>
-                                        </button>
-                                        <button class="btn border-0 text-muted">
-                                            <img src="{{ asset('assets/frontend/images/delete.svg') }}" alt=""
-                                                class="">
-                                            <span><a style="text-decoration: none" href="{{ route('cart.item.remove', $id) }}">Remove</a></span>
-                                        </button>
-                                    </div>
-
-                                    <!-- Counter -->
-                                    <div class="product-quantity d-flex mb-35" id="quantity">
-                                        <button type="button" id="sub" class="sub">-</button>
-                                        <input type="text" class="cart_qty" id="1" value="{{ $item['qty'] }}" />
-                                        <button type="button" id="add" class="add">+</button>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            @else
-                <div class="bg-light py-5 text-center">
-                    <h3 class="text-uppercase">{{ __('Cart is empty!') }}</h3>
-                </div>
-            @endif
-
-            <!-- Cart Item -->
-
-            <!-- Total -->
-            <div class="total fw-bold d-flex justify-content-between px-4 mt-0 align-items-center">
-                <h5 class="m-0 fw-light">Total</h5>
-                @if ($cart != null)
-                    @php
-                        $cartTotal = 0;
-                        $countitem = 0;
-                        if ($cart) {
-                            foreach ($cart as $p) {
+<section class="cart-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                @if($cart != null)
+                    <ul class="total-item-info">
+                        @php
+                            $cartTotal = 0;
+                            $countitem = 0;
+                            if($cart){
+                            foreach($cart as $p){
                                 $cartTotal += $p['price'] * $p['qty'];
                                 $countitem += $p['qty'];
                             }
                         }
-                    @endphp
-                                                <p class="cart-item-view">Total items: {{ $cart ? $countitem : 0 }}</p>
-                    <p class="total-price m-0">₵ <span class="cart-total-view" id="total">{{ $cartTotal }}</span></p>
+                        @endphp
+                        <li><strong>{{__('Total Items')}}:</strong> <strong class="cart-item-view">{{$cart ? $countitem : 0}}</strong></li>
+                        <li><strong>{{__('Cart Total')}} :</strong>  <strong class="cart-total-view">{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}} {{$cartTotal}} {{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</strong></li>
+                    </ul>
                 @endif
-            </div>
-            <div class="update-cart float-right d-inline-block">
-                <button class="main-btn main-btn-2" id="cartUpdate" data-href="{{ route('cart.update') }}"
-                    type="button"><span>{{ __('Update Cart') }}</span></button>
-            </div>
+                <div class="table-outer">
+                    @if($cart != null)
+                    <table class="cart-table">
+                        <thead class="cart-header">
+                            <tr>
+                                <th class="prod-column">{{__('Products')}}</th>
+                                <th class="hide-column"></th>
+                                <th>{{__('Quantity')}}</th>
+                                <th class="availability">{{__('Availability')}}</th>
+                                <th class="price">{{__('Price')}}</th>
+                                <th>{{__('Total')}}</th>
+                                <th>{{__('Remove')}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-            <div
-                class="shipping-proceed d-flex flex-column flex-md-row gap-2 mt-4 justify-content-lg-end justify-content-center align-items-center">
-                <div class="shippay">
-                    <a href="{{ route('front.product') }}"
-                        class="btn px-5 text-uppercase border border-2 rounded-2 w-100">Back
-                        to Collections</a>
-                </div>
-                <div class="shippay">
-                    <a href="{{ route('front.checkout') }}"
-                        class="btn px-5 bg-dark text-light text-uppercase border border-2 rounded-2 w-100">PROCEED TO
-                        Shipping</a>
-                </div>
+                            @foreach ($cart as $id => $item)
+                            @php
+                                $product = App\Product::findOrFail($id);
+                            @endphp
+                            <tr class="remove{{$id}}">
 
+                                <td colspan="2" class="prod-column">
+                                    <div class="column-box">
+                                        <div class="title pl-0">
+                                            <a target="_blank" href="{{route('front.product.details',$product->slug)}}"><h3 class="prod-title">{{convertUtf8($item['name'])}}</h3></a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="qty">
+                                    <div class="product-quantity d-flex mb-35" id="quantity">
+                                        <button type="button" id="sub" class="sub">-</button>
+                                        <input type="text" class="cart_qty" id="1" value="{{$item['qty']}}" />
+                                        <button type="button" id="add" class="add">+</button>
+                                    </div>
+                                </td>
+                                <input type="hidden" value="{{$id}}" class="product_id">
+                                <td class="unit-price">
+                                    <div class="available-info">
+                                        @if ($product->type == 'digital')
+                                            <span class="icon fa fa-check thm-bg-clr"></span>{{__('Item(s)')}}<br>{{__('Avilable Now')}}
+                                        @else
+                                            @if($product->stock >= $item['qty'])
+                                                <span class="icon fa fa-check thm-bg-clr"></span>{{__('Item(s)')}}<br>{{__('Avilable Now')}}
+                                            @else
+                                                <span class="icon fa fa-times thm-bg-rmv"></span>{{__('Item(s)')}}<br>{{__('Out Of Stock')}}
+                                            @endif
+                                        @endif
+                                    </div>
+                                </td>
+                                <td class="price cart_price">{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}} <span>{{$item['price']}}</span> {{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</td>
+                                <td class="sub-total">{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}} <span>{{$item['qty'] * $item['price']}}</span> {{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</td>
+                                <td>
+                                    <div class="remove">
+                                        <div class="checkbox">
+                                        <span class="fas fa-times item-remove" rel="{{$id}}" data-href="{{route('cart.item.remove',$id)}}"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+                    @else
+                        <div class="bg-light py-5 text-center">
+                            <h3 class="text-uppercase">{{__('Cart is empty!')}}</h3>
+                        </div>
+                    @endif
+                </div>
             </div>
         </div>
+        @if ($cart != null)
+            <div class="row cart-middle">
+                <div class="col-lg-6 offset-lg-6 col-sm-12">
+                    <div class="update-cart float-right d-inline-block ml-4">
+                        <a class="proceed-checkout-btn" href="{{route('front.checkout')}}" type="button"><span>{{__('Checkout')}}</span></a>
+                    </div>
+                    <div class="update-cart float-right d-inline-block">
+                        <button class="main-btn main-btn-2" id="cartUpdate" data-href="{{route('cart.update')}}" type="button"><span>{{__('Update Cart')}}</span></button>
+                    </div>
+                </div>
+            </div>
+        @endif
+    </div>
+</section>
 
-    </main>
+<!--====== SHOPPING CART PART ENDS ======-->
 
-    <script src="{{ asset('assets/frontend/js/jquery.ui.js') }}"></script>
-    <script src="{{ asset('assets/frontend/js/product.js') }}"></script>
-    <script src="{{ asset('assets/frontend/js/cart.js') }}"></script>
+@endsection
+
+
+@section('scripts')
+<script>
+    var symbol = "{{$bex->base_currency_symbol}}";
+    var position = "{{$bex->base_currency_symbol_position}}";
+</script>
+<script src="{{asset('assets/frontend/js/jquery.ui.js')}}"></script>
+<script src="{{asset('assets/frontend/js/product.js')}}"></script>
+<script src="{{asset('assets/frontend/js/cart.js')}}"></script>
+
+<script>
+
+
+</script>
 @endsection

@@ -1118,7 +1118,7 @@ a.proceed-checkout-btn:hover {
     margin-bottom: 20px;
 }
 .rate {
-    background-image: url(../img/rate-star.png);
+    background-image: url(../images/rate-star.png);
     background-position: 0 -13px;
     background-repeat: repeat-x;
     height: 13px;
@@ -1128,7 +1128,7 @@ a.proceed-checkout-btn:hover {
     margin-bottom: 2px;
 }
 .rating {
-    background-image: url(../img/rate-star.png);
+    background-image: url(../images/rate-star.png);
     background-position: 0 0;
     background-repeat: repeat-x;
     height: 13px;

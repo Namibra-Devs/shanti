@@ -16,6 +16,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js" defer></script>
 
+    @yield('styles')
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +27,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/oldstyle.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/common-style.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/plugin.min.css')}}">
+
+
+    <link rel="stylesheet" href="{{ asset('assets/user/css/bootstrap.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon.css') }}">
+
 
     <!-- Javascript -->
     <script src="{{ asset('assets/frontend/js/main.js') }}" defer></script>
@@ -46,6 +58,85 @@
 
 
     <title>Shanti Jewelry</title>
+
+           {{-- Styles for Product details sizes --}}
+           <style>
+
+            .product-sizes {
+                padding-top: 30px
+            }
+            .checkbox-alphanumeric::after,
+            .checkbox-alphanumeric::before {
+                content: '';
+                display: table;
+            }
+    
+            .checkbox-alphanumeric::after {
+                clear: both;
+            }
+    
+            .checkbox-alphanumeric input {
+                left: -9999px;
+                position: absolute;
+            }
+    
+            .checkbox-alphanumeric label {
+                width: 2.25rem;
+                height: 2.25rem;
+                float: left;
+                padding: 0.375rem 0;
+                margin-right: 0.375rem;
+                display: block;
+                color: #818a91;
+                font-size: 0.875rem;
+                font-weight: 400;
+                text-align: center;
+                background: transparent;
+                text-transform: uppercase;
+                border: 1px solid #e6e6e6;
+                border-radius: 2px;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                transform: scale(0.95);
+            }
+    
+            .checkbox-alphanumeric-circle label {
+                border-radius: 100%;
+            }
+    
+            .checkbox-alphanumeric label > img {
+                max-width: 100%;
+            }
+    
+            .checkbox-alphanumeric label:hover {
+                cursor: pointer;
+                border-color: #ff8000;
+            }
+    
+            .checkbox-alphanumeric input:checked ~ label {
+                transform: scale(1.1);
+                border-color: red !important;
+            }
+    
+            .checkbox-alphanumeric--style-1 label {
+                width: auto;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                border-radius: 2px;
+            }
+    
+            .d-table.checkbox-alphanumeric--style-1 {
+                width: 100%;
+            }
+    
+            .d-table.checkbox-alphanumeric--style-1 label {
+                width: 100%;
+            }
+            </style>
+    
 </head>
 
 <body>
@@ -98,6 +189,70 @@
             </div>
         </a>
     </div> --}}
+
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
+    <!-- popper js -->
+    <script src="{{ asset('assets/user/js/popper.min.js') }}"></script>
+    <!-- bootstrap js -->
+    <script src="{{ asset('assets/user/js/bootstrap.min.js') }}"></script>
+    <!-- owl carousel js -->
+    <script src="{{ asset('assets/user/js/owl.carousel.min.js') }}"></script>
+    <!-- slicknav js -->
+    <script src="{{ asset('assets/user/js/jquery.slicknav.min.js') }}"></script>
+    <!-- slick js -->
+    <script src="{{ asset('assets/user/js/slick.min.js') }}"></script>
+    <!-- isotope js -->
+    <script src="{{ asset('assets/user/js/isotope.pkgd.min.js') }}"></script>
+    <!-- magnific popup js -->
+    <script src="{{ asset('assets/user/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- nice select js -->
+    <script src="{{ asset('assets/user/js/datatables.min.js') }}"></script>
+    <script src="{{ asset('assets/user/js/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('assets/user/js/toastr.min.js') }}"></script>
+    <script src="{{ asset('assets/user/js/lazyload.min.js') }}"></script>
+    <!-- Summernote JS -->
+    <script src="{{ asset('assets/admin/js/plugin/summernote/summernote-bs4.js') }}"></script>
+
+    <!-- main js -->
+    <script src="{{ asset('assets/user/js/main.js') }}"></script>
+
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+
+    <script>
+        var imgupload = "{{ route('user.summernote.upload') }}";
+    </script>
+
+    <!-- custom js -->
+    <script src="{{ asset('assets/user/js/custom.js') }}"></script>
+
+    @yield('scripts')
+
+    @if (session()->has('success'))
+        <script>
+            toastr["success"]("{{ __(session()->get('success')) }}");
+        </script>
+    @endif
+
+    @if (session()->has('error'))
+        <script>
+            toastr["error"]("{{ __(session('error')) }}");
+        </script>
+    @endif
+
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 </body>
 
 </html>

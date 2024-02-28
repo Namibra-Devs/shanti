@@ -32,7 +32,8 @@ class PaymentController extends Controller
     public function payreturn()
     {
 
-        return view('frontend.product.success');
+
+        return view('front.product.success');
     }
 
     public function orderValidation($request, $gtype = 'online') {
@@ -44,14 +45,27 @@ class PaymentController extends Controller
             'billing_country' => 'required',
             'billing_number' => 'required',
             'billing_email' => 'required',
+            'shpping_fname' => 'required',
+            'shpping_lname' => 'required',
+            'shpping_address' => 'required',
+            'shpping_city' => 'required',
+            'shpping_country' => 'required',
+            'shpping_number' => 'required',
+            'shpping_email' => 'required',
         ];
 
         $request->validate($rules);
     }
 
-    public function orderTotal() {
+    public function orderTotal($shipping) {
+        if ($shipping != 0) {
+            $shipping = ShippingCharge::findOrFail($shipping);
+            $shippig_charge = $shipping->charge;
+        } else {
+            $shippig_charge = 0;
+        }
 
-        $total = round((cartTotal() - coupon()), 2);
+        $total = round((cartTotal() - coupon()) + $shippig_charge, 2);
 
         return round($total, 2);
     }
@@ -59,7 +73,15 @@ class PaymentController extends Controller
 
     public function saveOrder($request, $txnId, $chargeId, $paymentStatus = 'Pending', $gtype = 'online') {
 
-        $total = $this->orderTotal();
+        $total = $this->orderTotal($request["shipping_charge"]);
+        if ($request['shipping_charge'] != 0) {
+            $shipping = ShippingCharge::findOrFail($request['shipping_charge']);
+            $shippig_charge = $shipping->charge;
+            $shipping_method = $shipping->title;
+        } else {
+            $shippig_charge = 0;
+            $shipping_method = NULL;
+        }
 
         $order = new ProductOrder;
 
@@ -71,12 +93,24 @@ class PaymentController extends Controller
         $order->billing_city = $request['billing_city'];
         $order->billing_country = $request['billing_country'];
         $order->billing_number = $request['billing_number'];
+        $order->shpping_fname = $request['shpping_fname'];
+        $order->shpping_lname = $request['shpping_lname'];
+        $order->shpping_email = $request['shpping_email'];
+        $order->shpping_address = $request['shpping_address'];
+        $order->shpping_city = $request['shpping_city'];
+        $order->shpping_country = $request['shpping_country'];
+        $order->shpping_number = $request['shpping_number'];
         $order->gateway_type = $gtype;
 
+
         $order->cart_total = cartTotal();
+        // $order->tax = tax();
         $order->discount = coupon();
         $order->total = $total;
-        $order->method = $request['method'];
+        $order->shipping_method = $shipping_method;
+        $order->shipping_charge = round($shippig_charge, 2);
+        $order->method = 'MOMO/Visa';
+        $order->currency_code = 'GHS';
         $order['order_number'] = \Str::random(4) . time();
         $order['payment_status'] = $paymentStatus;
         $order['txnid'] = $txnId;
@@ -95,10 +129,8 @@ class PaymentController extends Controller
         $cart = Session::get('cart');
         $products = [];
         $qty = [];
-        $size = [];
         foreach ($cart as $id => $item) {
             $qty[] = $item['qty'];
-            $size[] = $item['size'];
             $products[] = Product::findOrFail($id);
         }
 
@@ -124,7 +156,8 @@ class PaymentController extends Controller
                 'summary' => $product->summary,
                 'description' => $product->description,
                 'created_at' => Carbon::now(),
-                'product_size' => $size[$key],
+                'product_size' => '$size[$key]',
+
             ]);
         }
 
@@ -138,6 +171,7 @@ class PaymentController extends Controller
     }
 
     public function sendMails($order) {
+
         $fileName = \Str::random(4) . time() . '.pdf';
         $path = 'assets/frontend/invoices/product/' . $fileName;
         $data['order']  = $order;

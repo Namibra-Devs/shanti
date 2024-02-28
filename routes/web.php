@@ -98,6 +98,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin', 'checkstatus']
     Route::post('/user/delete', 'Admin\UserController@delete')->name('admin.user.delete');
   });
 
+    // review
+    Route::post('product/review/submit', 'Front\ReviewController@reviewsubmit')->name('product.review.submit');
+
 
 
   // Admin Product Management Routes

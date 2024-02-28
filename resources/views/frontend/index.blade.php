@@ -9,7 +9,7 @@
             <h1 class="text-center col-lg-8">Custom jewelry for yourself, friends, family, and special occasions.</h1>
 
             <div class="text-center my-5">
-                <a href="{{ route('front.product')}}" class="btn btn-dark px-5 rounded-1">EXPLORE COLLECTION</a>
+                <a href="{{ route('front.product') }}" class="btn btn-dark px-5 rounded-1">EXPLORE COLLECTION</a>
             </div>
         </div>
     </div>
@@ -40,50 +40,183 @@
                 <div class="card border-0">
                     <div class="card-body">
                         <div class="item">
-                            <img src="{{ asset('assets/frontend/images/Painting.png') }}" alt="image" class="w-100" />
+                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
                             <div class="mt-2 d-flex justify-content-between align-content-center my-2">
                                 <div>
                                     <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
                                         <p class="fw-bold"><span>₵</span>2,499</p>
                                     </a>
                                 </div>
+
+                                <div>
+                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <div class="col-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="item">
+                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
+                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
+                                <div>
+                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
+                                        <p class="fw-bold"><span>₵</span>2,499</p>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="item">
+                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
+                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
+                                <div>
+                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
+                                        <p class="fw-bold"><span>₵</span>2,499</p>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="item">
+                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
+                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
+                                <div>
+                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
+                                        <p class="fw-bold"><span>₵</span>2,499</p>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="item">
+                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
+                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
+                                <div>
+                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
+                                        <p class="fw-bold"><span>₵</span>2,499</p>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="item">
+                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
+                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
+                                <div>
+                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
+                                        <p class="fw-bold"><span>₵</span>2,499</p>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- For Large Screens -->
-        <div class="page-content page-container d-none d-lg-block" id="page-content">
+        <div class="page-content page-container d-none d-lg-block product-area" id="page-content">
             <div class="padding">
                 <div class="row">
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card border-0 rounded-0 shadow-none bg-transparent">
                             <div class="card-body">
                                 <div class="owl-carousel">
-                                    <div class="item">
-                                        <img src="" alt="image" />
-                                        <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                                            <div>
-                                                <a href="" class="text-decoration-none text-dark">
-                                                    <p class="fw-bold"><span>₵</span></p>
-                                                </a>
+                                    @foreach ($products as $product)
+                                        <div class="item">
+                                            <div class="shop-item">
+                                                <div class="shop-thumb">
+                                                    <img class="lazy"
+                                                        data-src="{{ asset('assets/frontend/images/product/featured/' . $product->feature_image) }}"
+                                                        alt="">
+                                                    <ul>
+                                                        <li><a href="{{ route('front.product.checkout', $product->slug) }}"
+                                                                data-toggle="tooltip" data-placement="top"
+                                                                title="{{ __('Order Now') }}"><i
+                                                                    class="far fa-credit-card"></i></a></li>
+
+                                                        <li><a class="cart-link"
+                                                                data-href="{{ route('add.cart', $product->id) }}"
+                                                                data-toggle="tooltip" data-placement="top"
+                                                                title="{{ __('Add to Cart') }}"><i
+                                                                    class="fas fa-shopping-cart"></i></a></li>
+
+                                                        <li><a href="{{ route('front.product.details', $product->slug) }}"
+                                                                data-toggle="tooltip" data-placement="top"
+                                                                title="{{ __('View Details') }}"><i
+                                                                    class="fas fa-eye"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shop-content text-center">
+                                                    <div class="rate">
+                                                        <div class="rating" style="width:{{ $product->rating * 20 }}%">
+                                                        </div>
+                                                    </div>
+                                                    <a class="mt-3"
+                                                        href="{{ route('front.product.details', $product->slug) }}">
+                                                        {{ strlen($product->title) > 40 ? mb_substr($product->title, 0, 40, 'utf-8') . '...' : $product->title }}
+                                                    </a> <br>
+
+                                                    <span>
+                                                        GH₵ {{ $product->current_price }}
+                                                        @if (!empty($product->previous_price))
+                                                            <del> <span class="prepice">
+                                                                    {{ $product->previous_price }}</span></del>
+                                                        @endif
+                                                    </span>
+                                                </div>
                                             </div>
-
-                                            {{-- <div>
-                                                <button class="btn"><img src="{{ asset('assets/frontend/images/heart.svg') }}"
-                                                        alt=""></button>
-                                            </div> --}}
                                         </div>
-                                    </div>
-
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -100,7 +233,8 @@
             <div class="d-flex flex-column flex-lg-row justify-content-around mt-4 gap-4">
                 <div class="border border-2 border-black-50 rounded-2 m-0 px-0 collections">
                     <div class="d-flex gap-4">
-                        <img src="{{ asset('assets/frontend/images/rectangle.png') }}" alt="" class="img-fluid collection-img">
+                        <img src="{{ asset('assets/frontend/images/rectangle.png') }}" alt=""
+                            class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>BEST SELLERS</h6>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -110,7 +244,8 @@
 
                 <div class="border border-2 border-black-50 rounded-2 m-0 px-0 ollections">
                     <div class="d-flex gap-4">
-                        <img src="{{ asset('assets/frontend/images/rectangle2.png') }}" alt="" class="img-fluid collection-img">
+                        <img src="{{ asset('assets/frontend/images/rectangle2.png') }}" alt=""
+                            class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>NEW ARRIVALS</h6>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -120,7 +255,8 @@
 
                 <div class="border border-2 border-black-50 rounded-2 m-0 px-0 ollections">
                     <div class="d-flex gap-4">
-                        <img src="{{ asset('assets/frontend/images/rectangle.png') }}" alt="" class="img-fluid collection-img">
+                        <img src="{{ asset('assets/frontend/images/rectangle.png') }}" alt=""
+                            class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>BEST OFFERS</h6>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -141,7 +277,8 @@
         <div class="row gap-2 justify-content-center">
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
                 <div class="text-center py-4">
-                    <img src="{{ asset('assets/frontend/images/product/rings.svg') }}" alt="" class="image-fluid">
+                    <img src="{{ asset('assets/frontend/images/product/rings.svg') }}" alt=""
+                        class="image-fluid">
                 </div>
 
                 <div class="text-center">
@@ -151,7 +288,8 @@
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
                 <div class="text-center py-4">
-                    <img src="{{ asset('assets/frontend/images/product/Earring.svg') }}" alt="" class="image-fluid">
+                    <img src="{{ asset('assets/frontend/images/product/Earring.svg') }}" alt=""
+                        class="image-fluid">
                 </div>
 
                 <div class="text-center">
@@ -161,7 +299,8 @@
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
                 <div class="text-center py-4">
-                    <img src="{{ asset('assets/frontend/images/product/Bracelet.svg') }}" alt="" class="image-fluid">
+                    <img src="{{ asset('assets/frontend/images/product/Bracelet.svg') }}" alt=""
+                        class="image-fluid">
                 </div>
 
                 <div class="text-center">
@@ -171,7 +310,8 @@
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
                 <div class="text-center py-4">
-                    <img src="{{ asset('assets/frontend/images/product/pendants.svg') }}" alt="" class="image-fluid">
+                    <img src="{{ asset('assets/frontend/images/product/pendants.svg') }}" alt=""
+                        class="image-fluid">
                 </div>
 
                 <div class="text-center">
@@ -181,7 +321,8 @@
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
                 <div class="text-center py-4">
-                    <img src="{{ asset('assets/frontend/images/product/watch.svg') }}" alt="" class="image-fluid">
+                    <img src="{{ asset('assets/frontend/images/product/watch.svg') }}" alt=""
+                        class="image-fluid">
                 </div>
 
                 <div class="text-center">
@@ -198,16 +339,20 @@
             <div class="col-md-3 col-12 p-0 d-none d-md-block">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti3.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti3.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti2.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti2.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                 </div>
             </div>
@@ -226,16 +371,20 @@
             <div class="col-md-3 col-12 p-0 d-none d-md-block">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti1.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti1.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti3.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti3.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti2.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti2.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                     <div class="col-6">
-                        <img src="{{ asset('assets/frontend/images/joinshanti.png') }}" alt="" class="shantisocial">
+                        <img src="{{ asset('assets/frontend/images/joinshanti.png') }}" alt=""
+                            class="shantisocial">
                     </div>
                 </div>
             </div>

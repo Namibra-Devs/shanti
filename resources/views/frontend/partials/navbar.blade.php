@@ -32,7 +32,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item mx-2">
+                    {{-- <li class="nav-item mx-2">
                         <a class="nav-link text-uppercase" href="./wishlist.html"><img src="{{ asset('assets/frontend/images/heart.svg') }}"
                                 alt="" class="pe-1" />
                             <span class="position-relative">
@@ -41,8 +41,8 @@
                                     class="badge bg-badge position-absolute top-0 start-100 translate-middle">4</span>
                             </span>
                         </a>
-                    </li>
-                    <li class="nav-item mx-2">
+                    </li> --}}
+                    {{-- <li class="nav-item mx-2">
                         <button type="button" class="btn btn-transparent mx-4 border-0" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop">
                             <img src="{{ asset('assets/frontend/images/search.svg') }}" alt="">
@@ -70,7 +70,7 @@
                             </div>
                         </div>
 
-                    </li>
+                    </li> --}}
 
                     <li class="nav-item mx-2">
                         <a class="nav-link text-uppercase" href="{{ route('user.login') }}"><img src="{{ asset('assets/frontend/images/profile.svg') }}"

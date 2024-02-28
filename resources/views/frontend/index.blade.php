@@ -47,10 +47,6 @@
                                         <p class="fw-bold"><span>₵</span>2,499</p>
                                     </a>
                                 </div>
-
-                                <div>
-                                    <button class="btn"><img src="{{ asset('assets/frontend/images/heart.svg') }}" alt=""></button>
-                                </div>
                             </div>
                         </div>
                     </div>

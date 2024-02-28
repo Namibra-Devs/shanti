@@ -34,7 +34,7 @@
     
 
 
-    <link rel="stylesheet" href="{{ asset('assets/user/css/bootstrap.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/user/css/bootstrap.min.css') }}"> --}}
 
     <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon.css') }}">
 

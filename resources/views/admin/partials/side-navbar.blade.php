@@ -243,7 +243,7 @@
 
 
                 {{-- Events Manage --}}
-                @if (empty($admin->role) || (!empty($permissions) && in_array('Events Management', $permissions)))
+                {{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Events Management', $permissions)))
                     <li
                         class="nav-item
 @if (request()->path() == 'admin/event/categories') active
@@ -290,7 +290,7 @@
                             </ul>
                         </div>
                     </li>
-                @endif
+                @endif --}}
 
                 {{-- Users Management --}}
                 @if (empty($admin->role) || (!empty($permissions) && in_array('Users Management', $permissions)))

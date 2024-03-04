@@ -60,52 +60,6 @@
             {{-- @endif --}}
         @endif
 
-
-        @if (empty($admin->role) || (!empty($permissions) && in_array('Events Management', $permissions)))
-            {{-- <div class="col-sm-6 col-md-3">
-                <a href="{{ route('admin.event.index') }}" class="d-block">
-                    <div class="card card-stats card-info card-round">
-                        <div class="card-body ">
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="icon-big text-center">
-                                        <i class="fas fa-calendar-alt"></i>
-                                    </div>
-                                </div>
-                                <div class="col-9 col-stats">
-                                    <div class="numbers">
-                                        <p class="card-category">Events</p>
-                                        <h4 class="card-title">{{ $default->events()->count() }}</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div> --}}
-            <div class="col-sm-6 col-md-3">
-                <a href="{{ route('admin.event.payment.log') }}" class="d-block">
-                    <div class="card card-stats card-primary card-round">
-                        <div class="card-body ">
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="icon-big text-center">
-                                        <i class="far fa-calendar-check"></i>
-                                    </div>
-                                </div>
-                                <div class="col-9 col-stats">
-                                    <div class="numbers">
-                                        <p class="card-category">Event Bookings</p>
-                                        <h4 class="card-title">{{ \App\EventDetail::count() }}</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        @endif
-
     </div>
     <div class="row">
         <div class="col-lg-6">

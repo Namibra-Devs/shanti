@@ -33,7 +33,7 @@ class PaymentController extends Controller
     {
 
 
-        return view('front.product.success');
+        return view('frontend.product.success');
     }
 
     public function orderValidation($request, $gtype = 'online') {

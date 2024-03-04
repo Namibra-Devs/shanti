@@ -85,7 +85,7 @@
                                     :
                                 </div>
                                 <div>
-                                    <ul class="list-inline checkbox-alphanumeric checkbox-alphanumeric--style-1 mb-2 mx-1 flex-start row"
+                                    <div class="list-inline checkbox-alphanumeric checkbox-alphanumeric--style-1 mb-2 mx-1 flex-start row"
                                         style="padding-left: 0;">
                                         <div>
                                             <li class="for-mobile-capacity">
@@ -111,7 +111,7 @@
                                                 <label style="font-size: 12px;" for="choice_1-2XL">2XL</label>
                                             </li>
                                         </div>
-                                    </ul>
+                                    </div>
                                 </div>
                             </div>
                             <a class="main-btn cart-btn cart-link d-inline-block"

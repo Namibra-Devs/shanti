@@ -60,7 +60,7 @@
                             <tr>
                                 <td>{{$coupon->name}}</td>
                                 <td>{{$coupon->code}}</td>
-                                <td>{{($coupon->type == 'fixed' && $be->base_currency_symbol_position == 'left') ? $be->base_currency_symbol : ''}}{{$coupon->value}}{{$coupon->type == 'percentage' ? '%' : ''}}{{($coupon->type == 'fixed' && $be->base_currency_symbol_position == 'right') ? $be->base_currency_symbol : ''}}</td>
+                                <td>GHS</td>
                                 <td>
                                     @php
                                         $end = Carbon\Carbon::parse($coupon->end_date);

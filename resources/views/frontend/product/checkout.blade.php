@@ -310,188 +310,195 @@
             </div>
 
             <div class="bottom">
-              <div class="container">
-                <div class="row">
-                  @if (!onlyDigitalItemsInCart() && count($shippings) > 0)
-                    <div class="col-12 mb-5">
-                      <div class="table">
-                        <div class="shop-title-box">
-                          <h3>{{ __('Shipping Methods') }}</h3>
-                        </div>
-                        <table class="cart-table shipping-method">
-                          <thead class="cart-header">
-                            <tr>
-                              <th>#</th>
-                              <th>{{ __('Method') }}</th>
-                              <th class="price">{{ __('Cost') }}</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            @foreach ($shippings as $key => $charge)
-                              <tr>
-                                <td>
-                                  <input type="radio" {{ $key == 0 ? 'checked' : '' }} name="shipping_charge"
-                                    {{ $cart == null ? 'disabled' : '' }} data="{{ $charge->charge }}"
-                                    class="shipping-charge" value="{{ $charge->id }}">
-                                </td>
-                                <td>
-                                  <p class="mb-2"><strong>{{ convertUtf8($charge->title) }}</strong></p>
-                                  <p><small>{{ convertUtf8($charge->text) }}</small></p>
-                                </td>
-                                <td>
-                                 
-                                  <span>{{ $charge->charge }}</span>
-                                  
-                                </td>
-                              </tr>
-                            @endforeach
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  @else
-                    <div class="col-12">
-                      <input style="visibility: hidden;" type="radio" checked name="shipping_charge"
-                        {{ $cart == null ? 'disabled' : '' }} data="0" class="shipping-charge" value="0">
-                    </div>
-                  @endif
-                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="table">
-                      <div class="shop-title-box">
-                        <h3>{{ __('Order Summary') }}</h3>
-                      </div>
-                      <table class="cart-table">
-                        <thead class="cart-header">
-                          <tr>
-                            <th class="product-column">{{ __('Product') }}</th>
-                            <th>&nbsp;</th>
-                            <th>{{ __('Quantity') }}</th>
-                            <th class="price">{{ __('Total') }}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          @php
-                            $total = 0;
-                          @endphp
-                          @if ($cart)
-                            @foreach ($cart as $key => $item)
-                              <input type="hidden" name="product_id[]" value="{{ $key }}">
-                              @php
-                                $total += $item['price'] * $item['qty'];
-                                $product = App\Product::findOrFail($key);
-                                
-                              @endphp
-                              <tr>
-                                <td colspan="2" class="product-column">
-                                  <div class="column-box">
-                                    <div class="product-title">
-                                      <a target="_blank" href="{{ route('front.product.details', $product->slug) }}">
-                                        <h3 class="prod-title">{{ convertUtf8($item['name']) }}</h3>
-                                      </a>
+                <div class="container">
+                    <div class="row">
+                        @if (!onlyDigitalItemsInCart() && count($shippings) > 0)
+                            <div class="col-12 mb-5">
+                                <div class="table">
+                                    <div class="shop-title-box">
+                                        <h3>{{ __('Shipping Methods') }}</h3>
                                     </div>
-                                  </div>
-                                </td>
-                                <td class="qty">
-                                  <input class="quantity-spinner" disabled type="text" value="{{ $item['qty'] }}"
-                                    name="quantity">
-                                </td>
-                                <td class="price">
-                                 {{ $item['qty'] * $item['price'] }}
-                                </td>
-                              </tr>
-                            @endforeach
-                          @else
-                            <tr class="text-center">
-                              <td colspan="4">{{ __('Cart is empty') }}</td>
-                            </tr>
-                          @endif
-      
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="cart-total">
-                      <div class="shop-title-box">
-                        <h3>{{ __('Order Total') }}</h3>
-                      </div>
-      
-                      <div id="cartTotal">
-                        <ul class="cart-total-table">
-                          <li class="clearfix">
-                            <span class="col col-title">{{ __('Cart Total') }}</span>
-                            <span
-                              class="col"><span
-                                data="{{ cartTotal() }}"
-                                class="subtotal">{{ cartTotal() }}</span></span>
-                          </li>
-                          <li class="clearfix">
-                            <span class="col col-title">{{ __('Discount') }}
-                              <span class="text-success">(<i class="fas fa-minus"></i>)</span></span>
-                            <span class="col">
-                             <span
-                                data="{{ $discount }}">{{ $discount }}</span>
-                              
-                            </span>
-      
-                          </li>
-                          <li class="clearfix">
-                            <span class="col col-title">{{ __('Subtotal') }}</span>
-                            <span class="col">
-                             <span
-                                data="{{ cartSubTotal() }}" class="subtotal"
-                                id="subtotal">{{ cartSubTotal() }}</span>
-                            </span>
-                          </li>
-      
-      
-                          @if (!onlyDigitalItemsInCart() && sizeof($shippings) > 0)
-                            @php
-                              $scharge = round($shippings[0]->charge, 2);
-                            @endphp
-                            <li class="clearfix">
-                              <span class="col col-title">{{ __('Shipping Charge') }}
-                                <span class="text-danger">(<i class="fas fa-plus"></i>)</span></span>
-                              <span
-                                class="col"><span
-                                  data="{{ $scharge }}"
-                                  class="shipping">{{ $scharge }}</span></span>
-                            </li>
-                          @else
-                            @php
-                              $scharge = 0;
-                            @endphp
-                          @endif
-      
-                        </ul>
-                      </div>
-      
-                      <div class="coupon mt-4">
-                        <h4 class="mb-3">{{ __('Coupon') }}</h4>
-                        <div class="form-group d-flex">
-                          <input type="text" class="form-control" name="coupon" value="">
-                          <button class="btn btn-primary base-bg border-0" type="button"
-                            onclick="applyCoupon();">{{ __('Apply') }}</button>
+                                    <table class="cart-table shipping-method">
+                                        <thead class="cart-header">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>{{ __('Method') }}</th>
+                                                <th class="price">{{ __('Cost') }}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($shippings as $key => $charge)
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" {{ $key == 0 ? 'checked' : '' }}
+                                                            name="shipping_charge" {{ $cart == null ? 'disabled' : '' }}
+                                                            data="{{ $charge->charge }}" class="shipping-charge"
+                                                            value="{{ $charge->id }}">
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-2">
+                                                            <strong>{{ convertUtf8($charge->title) }}</strong></p>
+                                                        <p><small>{{ convertUtf8($charge->text) }}</small></p>
+                                                    </td>
+                                                    <td>
+
+                                                        <span>{{ $charge->charge }}</span>
+
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        @else
+                            <div class="col-12">
+                                <input style="visibility: hidden;" type="radio" checked name="shipping_charge"
+                                    {{ $cart == null ? 'disabled' : '' }} data="0" class="shipping-charge"
+                                    value="0">
+                            </div>
+                        @endif
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <div class="table">
+                                <div class="shop-title-box">
+                                    <h3>{{ __('Order Summary') }}</h3>
+                                </div>
+                                <table class="cart-table">
+                                    <thead class="cart-header">
+                                        <tr>
+                                            <th class="product-column">{{ __('Product') }}</th>
+                                            <th>&nbsp;</th>
+                                            <th>{{ __('Quantity') }}</th>
+                                            <th class="price">{{ __('Total') }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @php
+                                            $total = 0;
+                                        @endphp
+                                        @if ($cart)
+                                            @foreach ($cart as $key => $item)
+                                                <input type="hidden" name="product_id[]" value="{{ $key }}">
+                                                @php
+                                                    $total += $item['price'] * $item['qty'];
+                                                    $product = App\Product::findOrFail($key);
+
+                                                @endphp
+                                                <tr>
+                                                    <td colspan="2" class="product-column">
+                                                        <div class="column-box">
+                                                            <div class="product-title">
+                                                                <a target="_blank"
+                                                                    href="{{ route('front.product.details', $product->slug) }}">
+                                                                    <h3 class="prod-title">
+                                                                        {{ convertUtf8($item['name']) }}</h3>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="qty">
+                                                        <input class="quantity-spinner" disabled type="text"
+                                                            value="{{ $item['qty'] }}" name="quantity">
+                                                    </td>
+                                                    <td class="price">
+                                                        {{ $item['qty'] * $item['price'] }}
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @else
+                                            <tr class="text-center">
+                                                <td colspan="4">{{ __('Cart is empty') }}</td>
+                                            </tr>
+                                        @endif
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                      </div>
-      
-                      <div class="payment-options">
-                        <h4 class="mb-4">{{ __('Pay Via') }}</h4>
-      
-      
-                        @includeIf('front.product.payment-gateways')
-      
-      
-                        <div class="placeorder-button text-left">
-                          <button {{ $cart ? '' : 'disabled' }} class="main-btn" type="submit"><span
-                              class="btn-title">{{ __('Place Order') }}</span></button>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <div class="cart-total">
+                                <div class="shop-title-box">
+                                    <h3>{{ __('Order Total') }}</h3>
+                                </div>
+
+                                <div id="cartTotal">
+                                    <ul class="cart-total-table">
+                                        <li class="clearfix">
+                                            <span class="col col-title">{{ __('Cart Total') }}</span>
+                                            <span class="col"><span data="{{ cartTotal() }}"
+                                                    class="subtotal">{{ cartTotal() }}</span></span>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="col col-title">{{ __('Discount') }}
+                                                <span class="text-success">(<i class="fas fa-minus"></i>)</span></span>
+                                            <span class="col">
+                                                <span data="{{ $discount }}">{{ $discount }}</span>
+
+                                            </span>
+
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="col col-title">{{ __('Subtotal') }}</span>
+                                            <span class="col">
+                                                <span data="{{ cartSubTotal() }}" class="subtotal"
+                                                    id="subtotal">{{ cartSubTotal() }}</span>
+                                            </span>
+                                        </li>
+
+
+                                        {{-- @if (!onlyDigitalItemsInCart() && sizeof($shippings) > 0) --}}
+                                            @php
+                                                $scharge = round($shippings[0]->charge, 2);
+                                            @endphp
+                                            <li class="clearfix">
+                                                <span class="col col-title">{{ __('Shipping Charge') }}
+                                                    <span class="text-danger">(<i class="fas fa-plus"></i>)</span></span>
+                                                <span class="col"><span data="{{ $scharge }}"
+                                                        class="shipping">{{ $scharge }}</span></span>
+                                            </li>
+                                        {{-- @else
+                                            @php
+                                                $scharge = 0;
+                                            @endphp
+                                        @endif --}}
+
+                                        <li class="clearfix">
+                                            <span class="col col-title">{{ __('Order Total') }}</span>
+                                            <span class="col">
+                                                <span data="{{ cartSubTotal() }}"
+                                                    class="grandTotal">{{ cartSubTotal() }}</span> </span>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="coupon mt-4">
+                                    <h4 class="mb-3">{{ __('Coupon') }}</h4>
+                                    <div class="form-group d-flex">
+                                        <input type="text" class="form-control" name="coupon" value="">
+                                        <button class="btn btn-primary base-bg border-0" type="button"
+                                            onclick="applyCoupon();">{{ __('Apply') }}</button>
+                                    </div>
+                                </div>
+
+                                <div class="payment-options">
+                                    <h4 class="mb-4">{{ __('Pay Via') }}</h4>
+
+
+                                    @includeIf('frontend.product.payment-gateways')
+
+
+                                    <div class="placeorder-button text-left">
+                                        <button {{ $cart ? '' : 'disabled' }} class="main-btn" type="submit"><span
+                                                class="btn-title">{{ __('Place Order') }}</span></button>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                      </div>
-      
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
         </form>
     </section>

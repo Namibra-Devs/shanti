@@ -53,19 +53,20 @@
                                 </ul>
                             </div>
                         </div>
-                        {{-- <div class="shop-box shop-tag mt-30">
+                        <div class="shop-box shop-tag mt-30">
                         <div class="sidebar-title">
                             <h4 class="title">{{__('Populer Tags')}}</h4>
                         </div>
                         <div class="tag-item">
                             <ul>
                                 <li class="{{ request()->input('tag') == '' ? 'active-search' : '' }}"><a data-href="" class="tag-id cursor-pointer">{{__('All')}}</a></li>
-                                @foreach (explode(',', $be->popular_tags) as $tag)
+                                <?php $popular_tags = ['White', 'Gold', 'Silver', 'Male', 'Female'] ?>
+                                @foreach ($popular_tags as $tag)
                                 <li class="{{ request()->input('tag') == $tag ? 'active-search' : '' }}"><a data-href="{{$tag}}" class="tag-id cursor-pointer">{{convertUtf8($tag)}}</a></li>
                                 @endforeach
                             </ul>
                         </div>
-                    </div> --}}
+                    </div>
 
                         <div class="shop-box shop-filter mt-30">
                             <div class="sidebar-title">

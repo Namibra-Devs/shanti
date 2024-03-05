@@ -80,7 +80,7 @@
                         <form class="d-inline-block ml-2" method="GET"
                             action="{{ route('front.product.checkout', $product->slug) }}">
                             <input type="hidden" value="" name="qty" id="order_click_with_qty">
-                            <div class="row flex-start mx-0 product-sizes">
+                            {{-- <div class="row flex-start mx-0 product-sizes">
                                 <div class="product-description-label text-body mt-2 pr-2">Sizes
                                     :
                                 </div>
@@ -113,14 +113,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <a class="main-btn cart-btn cart-link d-inline-block"
                             data-href="{{ route('add.cart', $product->id) }}">{{ __('Add To Cart') }}</a>
                             <button type="submit" class="main-btn checkout-btn">{{ __('Order Now') }}</button>
                         </form>
                     </div>
 
-                    <div class="product-social-icon social-link a2a_kit a2a_kit_size_32">
+                    {{-- <div class="product-social-icon social-link a2a_kit a2a_kit_size_32">
                         <ul class="social-share">
                             <li>
                                 <a class="facebook a2a_button_facebook" href="">
@@ -149,7 +149,7 @@
                                   </a>
                                 </li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <script async src="https://static.addtoany.com/menu/page.js"></script>
                     <div class="product-details-tags">
                         <ul>
@@ -158,6 +158,9 @@
                             @endif
                             @if(!empty($product->category))
                             <li><span>{{__('Category')}}:</span> <a href="{{route('front.product').'?category_id='.$product->category_id}}">{{$product->category ? convertUtf8($product->category->name) : ''}}</a> </li>
+                            @endif
+                            @if (!empty($product->tags))
+                                <li><span>{{__('Product Tags')}}:</span>{{$product->tags}}</li>
                             @endif
                         </ul>
                     </div>

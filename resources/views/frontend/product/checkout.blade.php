@@ -337,7 +337,8 @@
                                                     </td>
                                                     <td>
                                                         <p class="mb-2">
-                                                            <strong>{{ convertUtf8($charge->title) }}</strong></p>
+                                                            <strong>{{ convertUtf8($charge->title) }}</strong>
+                                                        </p>
                                                         <p><small>{{ convertUtf8($charge->text) }}</small></p>
                                                     </td>
                                                     <td>
@@ -447,15 +448,15 @@
 
 
                                         {{-- @if (!onlyDigitalItemsInCart() && sizeof($shippings) > 0) --}}
-                                            @php
-                                                $scharge = round($shippings[0]->charge, 2);
-                                            @endphp
-                                            <li class="clearfix">
-                                                <span class="col col-title">{{ __('Shipping Charge') }}
-                                                    <span class="text-danger">(<i class="fas fa-plus"></i>)</span></span>
-                                                <span class="col"><span data="{{ $scharge }}"
-                                                        class="shipping">{{ $scharge }}</span></span>
-                                            </li>
+                                        @php
+                                            $scharge = round($shippings[0]->charge, 2);
+                                        @endphp
+                                        <li class="clearfix">
+                                            <span class="col col-title">{{ __('Shipping Charge') }}
+                                                <span class="text-danger">(<i class="fas fa-plus"></i>)</span></span>
+                                            <span class="col"><span data="{{ $scharge }}"
+                                                    class="shipping">{{ $scharge }}</span></span>
+                                        </li>
                                         {{-- @else
                                             @php
                                                 $scharge = 0;
@@ -553,6 +554,25 @@
         });
         // apply coupon functionality ends
 
+        $(document).on('click', '.shipping-charge', function() {
+            let total = 0;
+            let subtotal = 0;
+            let grantotal = 0;
+            let shipping = 0;
+
+            subtotal = parseFloat($('.subtotal').attr('data'));
+            grantotal = parseFloat($('.grandTotal').attr('data'));
+            shipping = parseFloat($('.shipping').attr('data'));
+
+            let shipCharge = parseFloat($(this).attr('data'));
+
+            shipping = parseFloat(shipCharge);
+            total = parseFloat(parseFloat(grantotal) + parseFloat(shipCharge));
+            $('.shipping').text(shipping);
+            $('.grandTotal').text(total);
+
+
+        })
 
         $(document).ready(function() {
             $(".input-check").first().attr('checked', true);

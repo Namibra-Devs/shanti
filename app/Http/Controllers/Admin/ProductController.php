@@ -453,6 +453,35 @@ class ProductController extends Controller
         Session::flash('success', 'Product deleted successfully!');
         return "success";
     }
+
+
+    public function populerTag(Request $request)
+    {
+
+        $data = BE::first();
+        return view('admin.product.tag.index',compact('data'));
+    }
+
+    public function populerTagupdate(Request $request)
+    {
+        $rules = [
+            'popular_tags' => 'required',
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            $errmsgs = $validator->getMessageBag()->add('error', 'true');
+            return response()->json($validator->errors());
+        }
+
+        $be->popular_tags = $request->popular_tags;
+        $be->save();
+        Session::flash('success', 'Populer tags update successfully!');
+        return "success";
+    }
+
+    
     public function paymentStatus(Request $request) {
         $order = ProductOrder::find($request->order_id);
         $order->payment_status = $request->payment_status;

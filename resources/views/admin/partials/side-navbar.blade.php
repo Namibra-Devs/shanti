@@ -125,6 +125,7 @@
 @elseif(request()->path() == 'admin/product/orders/report') show @endif"
                             id="category">
                             <ul class="nav nav-collapse">
+
                                 <li
                                         class="
     @if (request()->path() == 'admin/shipping') active

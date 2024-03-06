@@ -1,6 +1,11 @@
 /*---------------------------
 ** product page css
 ---------------------------*/
+@media (min-width: 767px) {
+    .product-area {
+        padding-top: 50px
+    }
+}
 
 .product-area {
     padding-top: 120px;

@@ -272,7 +272,7 @@ ul.language-dropdown li:last-child a {
 
   
 .hero-img {
-  background-image: url('./src/images/heroimg2.png');
+  background-image: url('../images/heroimg2.png');
   height: 60vh !important;  
 }
 }

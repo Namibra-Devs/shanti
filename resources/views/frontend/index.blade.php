@@ -21,8 +21,8 @@
             <h1 class="text-center col-lg-8">Custom jewelry for yourself, friends, family, and special occasions.</h1>
 
             <div class="text-center my-5">
-                <a href="./collections.html" class="btn btn-dark px-5 rounded-1 text-uppercase">Search catalog</a>
-                <a href="./collections.html" class="btn mt-3 px-5 rounded-1 text-uppercase">Read Our Care Guide</a>
+                <a href="{{ route('front.product') }}" class="btn btn-dark px-5 rounded-1 text-uppercase">Search catalog</a>
+                {{-- <a href="./collections.html" class="btn mt-3 px-5 rounded-1 text-uppercase">Read Our Care Guide</a> --}}
             </div>
         </div>
     </div>
@@ -34,186 +34,58 @@
             <p class="text-center text-muted">Essential products, best values, lower prices</p>
         </div>
 
-        <!-- For Small Screens -->
-        <div class="row d-lg-none justify-content-center align-content-center">
-            <div class="col-6">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="item">
-                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
-                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                                        <p class="fw-bold"><span>₵</span>2,499</p>
-                                    </a>
-                                </div>
+        <div class="page-content page-container d-lg-block product-area" id="page-content">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card border-0 rounded-0 shadow-none bg-transparent">
+                        <div class="card-body">
+                            <div class="owl-carousel">
+                                @foreach ($products as $product)
+                                    <div class="item">
+                                        <div class="shop-item">
+                                            <div class="shop-thumb">
+                                                <img class="lazy"
+                                                    data-src="{{ asset('assets/frontend/images/product/featured/' . $product->feature_image) }}"
+                                                    alt="">
+                                                <ul>
+                                                    <li><a href="{{ route('front.product.checkout', $product->slug) }}"
+                                                            data-toggle="tooltip" data-placement="top"
+                                                            title="{{ __('Order Now') }}"><i
+                                                                class="far fa-credit-card"></i></a></li>
 
-                                <div>
-                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="item">
-                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
-                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                                        <p class="fw-bold"><span>₵</span>2,499</p>
-                                    </a>
-                                </div>
+                                                    <li><a class="cart-link"
+                                                            data-href="{{ route('add.cart', $product->id) }}"
+                                                            data-toggle="tooltip" data-placement="top"
+                                                            title="{{ __('Add to Cart') }}"><i
+                                                                class="fas fa-shopping-cart"></i></a></li>
 
-                                <div>
-                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="item">
-                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
-                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                                        <p class="fw-bold"><span>₵</span>2,499</p>
-                                    </a>
-                                </div>
-
-                                <div>
-                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="item">
-                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
-                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                                        <p class="fw-bold"><span>₵</span>2,499</p>
-                                    </a>
-                                </div>
-
-                                <div>
-                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="item">
-                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
-                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                                        <p class="fw-bold"><span>₵</span>2,499</p>
-                                    </a>
-                                </div>
-
-                                <div>
-                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="item">
-                            <img src="./src/images/Painting.png" alt="image" class="w-100" />
-                            <div class="mt-2 d-flex justify-content-between align-content-center my-2">
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark">BUTTERFLY CLIP
-                                        <p class="fw-bold"><span>₵</span>2,499</p>
-                                    </a>
-                                </div>
-
-                                <div>
-                                    <button class="btn"><img src="./src/images/heart.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- For Large Screens -->
-        <div class="page-content page-container d-none d-lg-block product-area" id="page-content">
-            <div class="padding">
-                <div class="row">
-                    <div class="col-lg-12 grid-margin stretch-card">
-                        <div class="card border-0 rounded-0 shadow-none bg-transparent">
-                            <div class="card-body">
-                                <div class="owl-carousel">
-                                    @foreach ($products as $product)
-                                        <div class="item">
-                                            <div class="shop-item">
-                                                <div class="shop-thumb">
-                                                    <img class="lazy"
-                                                        data-src="{{ asset('assets/frontend/images/product/featured/' . $product->feature_image) }}"
-                                                        alt="">
-                                                    <ul>
-                                                        <li><a href="{{ route('front.product.checkout', $product->slug) }}"
-                                                                data-toggle="tooltip" data-placement="top"
-                                                                title="{{ __('Order Now') }}"><i
-                                                                    class="far fa-credit-card"></i></a></li>
-
-                                                        <li><a class="cart-link"
-                                                                data-href="{{ route('add.cart', $product->id) }}"
-                                                                data-toggle="tooltip" data-placement="top"
-                                                                title="{{ __('Add to Cart') }}"><i
-                                                                    class="fas fa-shopping-cart"></i></a></li>
-
-                                                        <li><a href="{{ route('front.product.details', $product->slug) }}"
-                                                                data-toggle="tooltip" data-placement="top"
-                                                                title="{{ __('View Details') }}"><i
-                                                                    class="fas fa-eye"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="shop-content text-center">
-                                                    <div class="rate">
-                                                        <div class="rating" style="width:{{ $product->rating * 20 }}%">
-                                                        </div>
+                                                    <li><a href="{{ route('front.product.details', $product->slug) }}"
+                                                            data-toggle="tooltip" data-placement="top"
+                                                            title="{{ __('View Details') }}"><i class="fas fa-eye"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="shop-content text-center">
+                                                <div class="rate">
+                                                    <div class="rating" style="width:{{ $product->rating * 20 }}%">
                                                     </div>
-                                                    <a class="mt-3"
-                                                        href="{{ route('front.product.details', $product->slug) }}">
-                                                        {{ strlen($product->title) > 40 ? mb_substr($product->title, 0, 40, 'utf-8') . '...' : $product->title }}
-                                                    </a> <br>
-
-                                                    <span>
-                                                        GH₵ {{ $product->current_price }}
-                                                        @if (!empty($product->previous_price))
-                                                            <del> <span class="prepice">
-                                                                    {{ $product->previous_price }}</span></del>
-                                                        @endif
-                                                    </span>
                                                 </div>
+                                                <a class="mt-3"
+                                                    href="{{ route('front.product.details', $product->slug) }}">
+                                                    {{ strlen($product->title) > 40 ? mb_substr($product->title, 0, 40, 'utf-8') . '...' : $product->title }}
+                                                </a> <br>
+
+                                                <span>
+                                                    GH₵ {{ $product->current_price }}
+                                                    @if (!empty($product->previous_price))
+                                                        <del> <span class="prepice">
+                                                                {{ $product->previous_price }}</span></del>
+                                                    @endif
+                                                </span>
                                             </div>
                                         </div>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -248,7 +120,8 @@
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>NEW ARRIVALS</h6>
-                            <p>Be the first to explore our latest additions that reflect the latest trends and timeless beauty</p>
+                            <p>Be the first to explore our latest additions that reflect the latest trends and timeless
+                                beauty</p>
                         </div>
                     </div>
                 </div>
@@ -259,7 +132,8 @@
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>BEST OFFERS</h6>
-                            <p>Take advantage of our exclusive offers to elevate your jewelry collection without breaking the bank</p>
+                            <p>Take advantage of our exclusive offers to elevate your jewelry collection without breaking
+                                the bank</p>
                         </div>
                     </div>
                 </div>
@@ -277,8 +151,7 @@
         <div class="row gap-2 justify-content-center">
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
                 <div class="text-center py-4">
-                    <img src="{{ asset('assets/frontend/images/product/rings.svg') }}" alt=""
-                        class="image-fluid">
+                    <img src="{{ asset('assets/frontend/images/product/rings.svg') }}" alt="" class="image-fluid">
                 </div>
 
                 <div class="text-center">

@@ -370,6 +370,9 @@ if (!app()->runningInConsole()) {
         $routeName = 'admin.login';
         Route::get("$permalink", "$action")->name("$routeName")->middleware('guest:admin');
         continue;
+      } elseif ($type == 'about') {
+        $action = 'Front\FrontendController@aboutPage';
+        $routeName = 'front.about';
       }
     }
 

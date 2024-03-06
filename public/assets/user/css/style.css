@@ -684,10 +684,11 @@ a.language-btn {
     text-align: left;
     -webkit-transition: .5s;
     transition: .5s;
+    color: #544946;
 }
 
 a.language-btn:hover {
-    color: #544946;
+    color: #504b4a;
 }
 
 .language-btn::after {

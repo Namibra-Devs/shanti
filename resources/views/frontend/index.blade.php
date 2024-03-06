@@ -283,7 +283,7 @@
 
                 <div class="text-center">
                     <h5>RINGS</h5>
-                    <p class="text-muted"><span>56</span> items</p>
+                    {{-- <p class="text-muted"><span>56</span> items</p> --}}
                 </div>
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
@@ -294,7 +294,7 @@
 
                 <div class="text-center">
                     <h5>EARRINGS</h5>
-                    <p class="text-muted"><span>56</span> items</p>
+                    {{-- <p class="text-muted"><span>56</span> items</p> --}}
                 </div>
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
@@ -305,7 +305,7 @@
 
                 <div class="text-center">
                     <h5>BRACELETS</h5>
-                    <p class="text-muted"><span>56</span> items</p>
+                    {{-- <p class="text-muted"><span>56</span> items</p> --}}
                 </div>
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
@@ -316,7 +316,7 @@
 
                 <div class="text-center">
                     <h5>PENDANTS</h5>
-                    <p class="text-muted"><span>56</span> items</p>
+                    {{-- <p class="text-muted"><span>56</span> items</p> --}}
                 </div>
             </div>
             <div class="col-lg-2 col-10 border border-dark-50 border-2 py-2">
@@ -327,7 +327,7 @@
 
                 <div class="text-center">
                     <h5>WATCHES</h5>
-                    <p class="text-muted"><span>56</span> items</p>
+                    {{-- <p class="text-muted"><span>56</span> items</p> --}}
                 </div>
             </div>
         </div>
@@ -363,7 +363,7 @@
                 <h3 class="joinshanti text-center display-5 d-block d-lg-none">Join #do.jewelry</h3>
 
                 <div class="my-5 text-center text-capitalize">
-                    <a href="#"
+                    <a href="https://www.instagram.com/shantijewelry_gh?igsh=cWE5bnllMzV5bDNm"
                         class="text-decoration-none text-dark border border-2 border-dark-50 rounded-1 px-4 py-2 text-uppercase follow">Follow
                         us on instagram</a>
                 </div>

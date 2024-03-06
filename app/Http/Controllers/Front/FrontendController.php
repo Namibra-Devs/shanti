@@ -83,6 +83,9 @@ class FrontendController extends Controller
         return view('frontend.index', $data);
     }
 
+    public function aboutPage() {
+        return view('frontend.about');
+    }
     
     public function paymentInstruction(Request $request)
     {

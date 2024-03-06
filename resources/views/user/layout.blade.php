@@ -47,6 +47,13 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="{{ asset('assets/user/css/responsive.css') }}">
     
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/frontend/css/oldstyle.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/user/css/style.css') }}">
+    
+        <link rel="stylesheet" href="{{ asset('assets/frontend/css/common-style.css') }}">
+        <link rel="stylesheet" href="{{asset('assets/frontend/css/plugin.min.css')}}">
 
     <!-- dark version css -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/frontend/css/dark.css') }}"> --}}
@@ -86,6 +93,9 @@
         <img src="{{ asset('assets/admin/images/loader.gif') }}" alt="">
     </div>
     {{-- Loader --}}
+
+    <script src="{{ asset('assets/frontend/js/main.js') }}" defer></script>
+
 
     <!-- popper js -->
     <script src="{{ asset('assets/user/js/popper.min.js') }}"></script>

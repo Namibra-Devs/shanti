@@ -31,6 +31,17 @@ $(document).ready(function() {
    
   });
 
+          // language dropdown toggle on clicking button
+          $('.language-btn').on('click', function(event) {
+            event.preventDefault();
+             event.stopPropagation();
+            $(this).next('.language-dropdown').toggleClass('open');
+        });
+        $(document).on('click', function(event) {
+          if($('.language-dropdown').hasClass('open')) {
+            $('.language-dropdown').removeClass('open');
+          }
+        });
 
   // Counter
   const counters = document.querySelectorAll('.counters');

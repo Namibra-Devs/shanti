@@ -21,7 +21,7 @@
 
 
             <div class=" m-auto">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item mx-2" id="cartIconWrapper">
                         <a class="nav-link text-uppercase" href="{{ route('front.cart') }}"><img src="{{ asset('assets/frontend/images/cart.svg') }}"
                                 alt="" class="pe-2" />
@@ -77,34 +77,36 @@
                         </li>
                     @endguest
                     @auth
-                    <div class="language dashboard">
-                        <a class="language-btn" href="#">
-                            <i class="far fa-user"></i> {{Auth::user()->username}}
-                        </a>
-                        <ul class="language-dropdown">
-                            <li>
-                                <a href="{{route('user-dashboard')}}">{{__('Dashboard')}}</a>
-                            </li>
-
-                                <li><a href="{{route('user-orders')}}">{{__('Product Orders')}} </a></li>
-                            <li>
-                                <a href="{{route('user-profile')}}">{{__('Edit Profile')}}</a>
-                            </li>
-
+                    <li>
+                        <div class="language dashboard">
+                            <a class="language-btn" href="#">
+                                <i class="far fa-user"></i> {{Auth::user()->username}}
+                            </a>
+                            <ul class="language-dropdown">
                                 <li>
-                                    <a href="{{route('shpping-details')}}">{{__('Shipping Details')}}</a>
+                                    <a href="{{route('user-dashboard')}}">{{__('Dashboard')}}</a>
                                 </li>
+    
+                                    <li><a href="{{route('user-orders')}}">{{__('Product Orders')}} </a></li>
                                 <li>
-                                    <a href="{{route('billing-details')}}">{{__('Billing Details')}}</a>
+                                    <a href="{{route('user-profile')}}">{{__('Edit Profile')}}</a>
                                 </li>
+    
+                                    <li>
+                                        <a href="{{route('shpping-details')}}">{{__('Shipping Details')}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('billing-details')}}">{{__('Billing Details')}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('user-reset')}}">{{__('Change Password')}}</a>
+                                    </li>
                                 <li>
-                                    <a href="{{route('user-reset')}}">{{__('Change Password')}}</a>
+                                    <a href="{{route('user-logout')}}" target="_self">{{__('Logout')}}</a>
                                 </li>
-                            <li>
-                                <a href="{{route('user-logout')}}" target="_self">{{__('Logout')}}</a>
-                            </li>
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
+                    </li>
                     @endauth
                 </ul>
             </div>

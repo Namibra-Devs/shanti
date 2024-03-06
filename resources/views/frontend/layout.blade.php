@@ -28,6 +28,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/oldstyle.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/user/css/style.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/common-style.css') }}">
     <link rel="stylesheet" href="{{asset('assets/frontend/css/plugin.min.css')}}">
@@ -154,30 +155,28 @@
         <div class="container justify-content-center align-content-center">
             <ul
                 class="list-unstyled text-dark d-md-flex d-flex flex-lg-row flex-column justify-content-center align-content-center text-center gap-4 mb-4 mb-lg-0 mt-4">
-                <li class="px-5"><a href="" class="text-decoration-none text-dark">EXPLORE</a></li>
-                <li class="px-5"><a href="" class="text-decoration-none text-dark">ABOUT US</a></li>
-                <li><a href="" class="text-uppercase text-decoration-none text-dark">Shanti jewelry</a></li>
-                <li class="px-5">
+                <li class="px-5"><a href="{{ route('front.product')}}" class="text-decoration-none text-dark">EXPLORE</a></li>
+                <li class="px-5"><a href="{{ route('front.about')}}" class="text-decoration-none text-dark">ABOUT US</a></li>
+                <li><a href="#" class="text-uppercase text-decoration-none text-dark">Shanti jewelry</a></li>
+                {{-- <li class="px-5">
                     <div class="dropdown">
-                        {{-- <button class="btn p-0 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn p-0 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             EN
                             <span class="w-100">
                                 <img src="asset('{{ asset('assets/frontend/images/arrow-down.svg') }}')" alt="">
                             </span>
-                        </button> --}}
+                        </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">English</a></li>
                             <li><a class="dropdown-item" href="#">Chinese</a></li>
                             <li><a class="dropdown-item" href="#">French</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> --}}
             </ul>
 
             <ul class="list-unstyled text-muted d-flex justify-content-center align-content-center socials mt-5">
-                <li class="px-4 px-lg-5"><a href="" class="text-decoration-none text-muted">FACEBOOK</a></li>
-                <li class="px-4 px-lg-5"><a href="" class="text-decoration-none text-muted">INSTAGRAM</a></li>
-                <li class="px-4 px-lg-5"><a href="" class="text-decoration-none text-muted">SNAPCHAT</a></li>
+                <li class="px-4 px-lg-5"><a href="https://www.instagram.com/shantijewelry_gh?igsh=cWE5bnllMzV5bDNm" class="text-decoration-none text-muted">INSTAGRAM</a></li>
             </ul>
         </div>
     </footer>

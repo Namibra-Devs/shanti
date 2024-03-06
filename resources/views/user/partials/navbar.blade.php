@@ -9,13 +9,13 @@
                         <a class="nav-link text-uppercase" aria-current="page" href="{{ route('front.product') }}">COLLECTIONS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">CONTACT US</a>
+                        <a class="nav-link text-uppercase" href="">CONTACT US</a>
                     </li>
                 </ul>
             </div>
 
             <div class="logo m-auto text-center mt-0">
-                <a class="navbar-brand" href="#"><img src="{{ asset('assets/frontend/images/logo.svg') }}" alt=""
+                <a class="navbar-brand" href="/"><img src="{{ asset('assets/frontend/images/logo.svg') }}" alt=""
                         class="img-fluid"></a>
             </div>
 

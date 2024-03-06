@@ -38,7 +38,6 @@
                                     <tr>
                                         <th class="prod-column">{{ __('Products') }}</th>
                                         <th class="hide-column"></th>
-                                        <th class="prod-size">size</th>
                                         <th>{{ __('Quantity') }}</th>
                                         <th class="availability">{{ __('Availability') }}</th>
                                         <th class="price">{{ __('Price') }}</th>
@@ -64,9 +63,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="prod-size">
-                                                <span>{{ $item['size'] }}</span>
-                                            </td>
+                                            
                                             <td class="qty">
                                                 <div class="product-quantity d-flex mb-35" id="quantity">
                                                     <button type="button" id="sub" class="sub">-</button>
@@ -112,14 +109,14 @@
             </div>
             @if ($cart != null)
                 <div class="row cart-middle">
-                    <div class="col-lg-6 offset-lg-6 col-sm-12">
+                    <div class="col-lg-6 offset-lg-6 col-sm-12 d-flex" style="margin-left: 80%">
                         <div class="update-cart float-right d-inline-block ml-4">
                             <a class="proceed-checkout-btn" href="{{ route('front.checkout') }}"
-                                type="button"><span>{{ __('Checkout') }}</span></a>
+                                ><span>{{ __('Checkout') }}</span></a>
                         </div>
-                        <div class="update-cart float-right d-inline-block">
+                        <div class="update-cart float-right d-inline-block ml-4" style="margin-left: 20px">
                             <button class="main-btn main-btn-2" id="cartUpdate" data-href="{{ route('cart.update') }}"
-                                type="button"><span>{{ __('Update Cart') }}</span></button>
+                                ><span>{{ __('Update Cart') }}</span></button>
                         </div>
                     </div>
                 </div>

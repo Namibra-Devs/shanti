@@ -237,7 +237,7 @@
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>BEST SELLERS</h6>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Discover our most sought-after pieces that have captured the hearts of our customers.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>NEW ARRIVALS</h6>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Be the first to explore our latest additions that reflect the latest trends and timeless beauty</p>
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,7 @@
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>BEST OFFERS</h6>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Take advantage of our exclusive offers to elevate your jewelry collection without breaking the bank</p>
                         </div>
                     </div>
                 </div>

@@ -91,6 +91,26 @@ body {
   font-size: 3rem !important;
 }
 
+@media (max-width: 991.98px) {
+  .login-img {
+    display: none;
+  }
+
+  .login-form-wrapper {
+    width: 100%
+  }
+
+  .login-header {
+    font-size: 36px !important;
+    padding: 20px
+  }
+
+  .login-form {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+}
+
 .login-form {
   width: 60%;
 }

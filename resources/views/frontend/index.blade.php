@@ -105,7 +105,7 @@
             <div class="d-flex flex-column flex-lg-row justify-content-around mt-4 gap-4">
                 <div class="border border-2 border-black-50 rounded-2 m-0 px-0 collections">
                     <div class="d-flex gap-4">
-                        <img src="{{ asset('assets/frontend/images/rectangle.png') }}" alt=""
+                        <img src="{{ asset('assets/frontend/images/Rectangle.png') }}" alt=""
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>BEST SELLERS</h6>
@@ -116,7 +116,7 @@
 
                 <div class="border border-2 border-black-50 rounded-2 m-0 px-0 ollections">
                     <div class="d-flex gap-4">
-                        <img src="{{ asset('assets/frontend/images/rectangle2.png') }}" alt=""
+                        <img src="{{ asset('assets/frontend/images/Rectangle2.png') }}" alt=""
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>NEW ARRIVALS</h6>
@@ -128,7 +128,7 @@
 
                 <div class="border border-2 border-black-50 rounded-2 m-0 px-0 ollections">
                     <div class="d-flex gap-4">
-                        <img src="{{ asset('assets/frontend/images/rectangle.png') }}" alt=""
+                        <img src="{{ asset('assets/frontend/images/Rectangle.png') }}" alt=""
                             class="img-fluid collection-img">
                         <div class="py-3">
                             <h6>BEST OFFERS</h6>

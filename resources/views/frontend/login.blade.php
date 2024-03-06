@@ -3,17 +3,16 @@
 @section('content')
     <!-- Login Form -->
     <div class="row w-100">
-        <div class="col-4">
+        <div class="col-4 login-img">
             <img src="{{{ asset('assets/frontend/images/loginbanner.svg')}}}" alt="" class="img-fluid logobanner" />
         </div>
 
-        <div class="col-8">
+        <div class="col-8 login-form-wrapper">
             <div class="logo text-center pt-5">
                 <img src="{{ asset('assets/frontend/images/logo.svg') }}" alt="" class="img-fluid" />
 
                 <div class="text-center">
                     <h1 class="pt-5 login-header">Hello, Let's Sign You In</h1>
-                    <p class="login-text">Please sign in Here.</p>
                 </div>
             </div>
 

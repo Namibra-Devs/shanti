@@ -121,7 +121,7 @@
 
             <div class="">
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    data-bs-target="#navbarSupportedContentul" aria-controls="navbarSupportedContentul"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <img src="{{ asset('assets/frontend/images/menu.svg') }}" alt="">
                 </button>
@@ -131,7 +131,7 @@
                         class="img-fluid w-25"></a>
             </div>
 
-            <div>
+            {{-- <div>
                 <button type="button" class="btn btn-transparent mx-4 border-0" data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop">
                     <img src="{{ asset('assets/frontend/images/search.svg') }}" alt="">
@@ -158,48 +158,62 @@
                     </div>
                 </div>
 
-            </div>
+            </div> --}}
         </div>
 
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContentul">
             <ul class="navbar-nav mb-4 mb-lg-0 gap-3 text-center bg-other">
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase active" aria-current="page" href="#">Barrette</a>
+                    <a class="nav-link text-uppercase active" aria-current="page" href="{{ route('front.product') }}">Barrette</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="./rings.html">Rings</a>
+                    <a class="nav-link text-uppercase" href="{{ route('front.product') }}">Rings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="#"">Brooch</a>
+                    <a class="nav-link text-uppercase" href="{{ route('front.product')}}">Brooch</a>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="./collections.html">collections</a>
+                    <a class="nav-link text-uppercase" href="{{ route('front.product') }}">collections</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="#">My account</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase btn btn-dark bg-dark text-light px-5" href="#">Do
-                        X</a>
-                </li>
-                <li class="px-5">
-                    <div class="dropdown">
-                        <button class="btn p-0 border-0" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            EN
-                            <span class="w-100">
-                                <img src="{{ asset('assets/frontend/images/arrow-down.svg') }}" alt="">
-                            </span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Chinese</a></li>
-                            <li><a class="dropdown-item" href="#">French</a></li>
-                        </ul>
-                    </div>
-                </li>
+                @guest
+                        <li class="nav-item mx-2">
+                            <a href="{{ route('user.login') }}">Login</a>
+                        </li>
+                    @endguest
+                    @auth
+                    <li>
+                        <div class="language dashboard">
+                            <a class="language-btn" href="#">
+                                <i class="far fa-user"></i> {{Auth::user()->username}}
+                            </a>
+                            <ul class="language-dropdown">
+                                <li>
+                                    <a href="{{route('user-dashboard')}}">{{__('Dashboard')}}</a>
+                                </li>
+    
+                                    <li><a href="{{route('user-orders')}}">{{__('Product Orders')}} </a></li>
+                                <li>
+                                    <a href="{{route('user-profile')}}">{{__('Edit Profile')}}</a>
+                                </li>
+    
+                                    <li>
+                                        <a href="{{route('shpping-details')}}">{{__('Shipping Details')}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('billing-details')}}">{{__('Billing Details')}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('user-reset')}}">{{__('Change Password')}}</a>
+                                    </li>
+                                <li>
+                                    <a href="{{route('user-logout')}}" target="_self">{{__('Logout')}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    @endauth
             </ul>
 
         </div>
